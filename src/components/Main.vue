@@ -1,37 +1,73 @@
 <template>
-  
+  <div>
     <v-system-bar> </v-system-bar>
-    <v-app-bar app>
-      <v-menu :open-on-click="true">
-         <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            color="primary"
-            dark
-            v-bind="attrs"
-            v-on="on"
-          >
-            Dropdown
-        </v-btn>
-        </template>
-      </v-menu>
-    </v-app-bar>
-
+    <Header/>
+    <Hero/>
     <!-- Sizes your content based upon application components -->
     <v-main>
 
       <!-- Provides the application the proper gutter -->
-      <v-container fluid>
+      <v-container fluid class="d-flex flex-column">
+        <v-subheader>Subheader</v-subheader>
       </v-container>
-    </v-main>
-
-    <v-footer app>
-      <!-- -->
-    </v-footer>
+      <v-container fluid class="d-flex flex-column">
+        <v-subheader>Subheader</v-subheader>
+        <v-tabs
+         v-model="tab"
+         dark
+        >
+          <v-tab
+            v-for="item in items"
+          :key="item.tab"
+          >
+            {{item.tab}}
+          </v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+          <v-tab-item
+            v-for="item in items"
+            :key="item.tab"
+          >
+            <v-card flat>
+              <v-card-text>{{ item.content }}</v-card-text>
+            </v-card>
+          </v-tab-item>
+        </v-tabs-items>
+      </v-container>
+      <v-container fluid class="d-flex">
+        <div>
+          <v-subheader>Subheader</v-subheader>
+        </div>
+        <div>
+          <v-img max-width="150px" max-height="300px" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZwYlO7jTCyQ/profile-displayphoto-shrink_200_200/0?e=1599696000&v=beta&t=SP2G6ap8vTOPz3tecrJkqt-Bihc0tEZKIFTZPII4w-0" alt="Arkadiusz"></v-img>
+        </div>
+      </v-container>
+    </v-main>    
+    <Footer />
+  </div>
 </template>
 
 <script>
+import Header from "./Header.vue"
+import Hero from "./Hero.vue"
+import Footer from "./Footer"
 export default {
   name: 'Main',
+  components: {
+    Header,
+    Hero,
+    Footer
+  },
+   data () {
+      return {
+        tab: null,
+        items: [
+          { tab: 'One', content: 'Tab 1 Content' },
+          { tab: 'Two', content: 'Tab 2 Content' },
+          { tab: 'Three', content: 'Tab 3 Content' },          
+        ],
+      }
+    },
   props: {
     msg: String
   }
