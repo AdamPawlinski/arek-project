@@ -1,5 +1,5 @@
  <template>
- <v-footer>
+ <v-footer class="blue lighten-4">
  <v-row
       justify="center"
       no-gutters
@@ -25,7 +25,7 @@
         </v-btn>
       </v-card-text>
       <v-col
-        class="primary lighten-2 py-4 text-center white--text"
+        class="py-4 text-center white--text"
         cols="12"
       >
         {{ new Date().getFullYear() }} — <strong>Supra Finanse</strong>

@@ -10,7 +10,7 @@
       <v-container fluid class="d-flex flex-column">
         <v-subheader>Subheader</v-subheader>
       </v-container>
-      <v-container fluid class="d-flex flex-column">
+      <v-container fluid class="d-flex flex-column grey lighten-5">
         <v-subheader>Subheader</v-subheader>
         <v-tabs
          v-model="tab"
@@ -43,7 +43,7 @@
         </div>
       </v-container>
     </v-main>    
-    <Footer />
+    <Footer app />
   </div>
 </template>
 
