@@ -1,20 +1,127 @@
 <template>
-  <div>
-    <v-system-bar> </v-system-bar>
-    <Header/>
-    <Hero/>
+  <div>    
     <!-- Sizes your content based upon application components -->
-    <v-main>
-
+    <v-main class="pt-0">
+      <Hero />
       <!-- Provides the application the proper gutter -->
-      <v-container fluid class="d-flex flex-column">
-        <v-subheader>Subheader</v-subheader>
+      <v-container fluid class="d-flex flex-column align-center">
+        <v-subheader class="text-h2 my-10">Finansowanie firm</v-subheader>
+        <div class="d-flex flex-row">
+        <v-card
+          class="mx-10"
+          max-width="400"
+        >
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+          >
+            <v-card-title>Analiza potrzeb</v-card-title>
+          </v-img>
+
+          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>Lorem ipsum</div>
+
+            <div>Lorem ipsum dolor sit</div>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn
+              color="orange"
+              text
+            >
+              Share
+            </v-btn>
+
+            <v-btn
+              color="orange"
+              text
+            >
+              Explore
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-10"
+          max-width="400"
+        >
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+          >
+            <v-card-title>Przygotowanie dokumentacji</v-card-title>
+          </v-img>
+
+          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>Lorem ipsum</div>
+
+            <div>Lorem ipsum dolor sit</div>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn
+              color="orange"
+              text
+            >
+              Share
+            </v-btn>
+
+            <v-btn
+              color="orange"
+              text
+            >
+              Explore
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+        <v-card
+          class="mx-10"
+          max-width="400"
+        >
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+          >
+            <v-card-title>Przygotowanie dokumentacji</v-card-title>
+          </v-img>
+
+          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>Lorem ipsum</div>
+
+            <div>Lorem ipsum dolor sit</div>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn
+              color="orange"
+              text
+            >
+              Share
+            </v-btn>
+
+            <v-btn
+              color="orange"
+              text
+            >
+              Explore
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+        </div>
       </v-container>
-      <v-container fluid class="d-flex flex-column grey lighten-5">
-        <v-subheader>Subheader</v-subheader>
+      <v-container  class="d-flex flex-column my-10 grey lighten-5" height="800">
+        <v-subheader class="text-h2 my-10">Oferta</v-subheader>
         <v-tabs
          v-model="tab"
-         dark
+         class="blue darken-2"
         >
           <v-tab
             v-for="item in items"
@@ -29,45 +136,49 @@
             :key="item.tab"
           >
             <v-card flat>
-              <v-card-text>{{ item.content }}</v-card-text>
+              <v-card-text class="text-left">{{ item.content }}</v-card-text>
             </v-card>
           </v-tab-item>
         </v-tabs-items>
       </v-container>
-      <v-container fluid class="d-flex">
+      <v-container class="d-flex flex-column grey lighten-5 my-10">
         <div>
-          <v-subheader>Subheader</v-subheader>
+          <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
-        <div>
-          <v-img max-width="150px" max-height="300px" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZwYlO7jTCyQ/profile-displayphoto-shrink_200_200/0?e=1599696000&v=beta&t=SP2G6ap8vTOPz3tecrJkqt-Bihc0tEZKIFTZPII4w-0" alt="Arkadiusz"></v-img>
-        </div>
+        <v-card :class="`elevation-${hover ? 10 : 0}`" class="d-flex flex-column align-center">
+          <v-card-text>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. 
+              Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. 
+              Fusce nec venenatis orci. Nunc hendrerit orci risus, et egestas mi condimentum in. Nulla in pretium turpis. 
+              Maecenas quis pulvinar sem. Duis mattis ac ipsum id scelerisque. Quisque euismod varius metus, vitae viverra lorem maximus in. 
+              Proin vulputate turpis ac elit tempus laoreet. Proin sit amet ex non mi semper lobortis.
+            </p>
+          </v-card-text>
+          <v-img  class="rounded-circle" max-width="150px" max-height="300px" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZwYlO7jTCyQ/profile-displayphoto-shrink_200_200/0?e=1599696000&v=beta&t=SP2G6ap8vTOPz3tecrJkqt-Bihc0tEZKIFTZPII4w-0" alt="Arkadiusz"></v-img>        
+        </v-card>
       </v-container>
-    </v-main>    
-    <Footer app />
+    </v-main>
   </div>
 </template>
 
 <script>
-import Header from "./Header.vue"
-import Hero from "./Hero.vue"
-import Footer from "./Footer"
+import Hero from "./Hero"
 export default {
-  name: 'Main',
+  name: 'Main', 
   components: {
-    Header,
     Hero,
-    Footer
+  }, 
+  data () {
+    return {
+      tab: null,
+      items: [
+        { tab: 'Kredyt firmowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
+        { tab: 'Inwestycje', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
+        { tab: 'Kredyt hipoteczny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },          
+      ],
+    }
   },
-   data () {
-      return {
-        tab: null,
-        items: [
-          { tab: 'One', content: 'Tab 1 Content' },
-          { tab: 'Two', content: 'Tab 2 Content' },
-          { tab: 'Three', content: 'Tab 3 Content' },          
-        ],
-      }
-    },
   props: {
     msg: String
   }

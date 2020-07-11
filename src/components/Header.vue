@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app class="d-flex justify-space-between blue lighten-4">
+  <v-app-bar app class="d-flex justify-space-between blue darken-2">
     <v-img src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" :contain="true">
     </v-img>
     <v-menu :open-on-click="true">

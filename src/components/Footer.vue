@@ -1,5 +1,5 @@
  <template>
- <v-footer class="blue lighten-4">
+ <v-footer class="blue darken-2">
  <v-row
       justify="center"
       no-gutters
