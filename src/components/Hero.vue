@@ -38,11 +38,11 @@ export default {
   data () {
       return {
         items: [
-          {
-            src: '../assets/pobrane.jpeg',
-            title: 'Finanse',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. '
-          },
+          // {
+          //   src: '../assets/pobrane.jpeg',
+          //   title: 'Finanse',
+          //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. '
+          // },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
             title: 'Kredyty',
