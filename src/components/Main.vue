@@ -2,120 +2,130 @@
   <div>    
     <!-- Sizes your content based upon application components -->
     <v-main class="pt-0">
-      <Hero />
+      <v-container fluid>        
+        <Hero />          
+      </v-container>
       <!-- Provides the application the proper gutter -->
       <v-container fluid class="d-flex flex-column align-center">
+        <v-row>
         <v-subheader class="text-h2 my-10">Finansowanie firm</v-subheader>
-        <div class="d-flex flex-row">
-        <v-card
-          class="mx-10"
-          max-width="400"
-        >
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-          >
-            <v-card-title>Analiza potrzeb</v-card-title>
-          </v-img>
-
-          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
-
-          <v-card-text class="text--primary">
-            <div>Lorem ipsum</div>
-
-            <div>Lorem ipsum dolor sit</div>
-          </v-card-text>
-
-          <v-card-actions>
-            <v-btn
-              color="orange"
-              text
+        </v-row>
+        <v-row>
+          <v-col class="d-flex justify-center" sm="12" lg="4">
+            <v-card
+              class="mx-10"
+              max-width="400"
             >
-              Share
-            </v-btn>
+              <v-img
+                class="white--text align-end"
+                height="200px"
+                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+              >
+                <v-card-title>Analiza potrzeb</v-card-title>
+              </v-img>
 
-            <v-btn
-              color="orange"
-              text
+              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+
+              <v-card-text class="text--primary">
+                <div>Lorem ipsum</div>
+
+                <div>Lorem ipsum dolor sit</div>
+              </v-card-text>
+
+              <v-card-actions>
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Share
+                </v-btn>
+
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+          <v-col class="d-flex justify-center" sm="12" lg="4">
+            <v-card
+              class="mx-10"
+              max-width="400"
             >
-              Explore
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card
-          class="mx-10"
-          max-width="400"
-        >
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-          >
-            <v-card-title>Przygotowanie dokumentacji</v-card-title>
-          </v-img>
+              <v-img
+                class="white--text align-end"
+                height="200px"
+                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+              >
+                <v-card-title>Przygotowanie dokumentacji</v-card-title>
+              </v-img>
 
-          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
 
-          <v-card-text class="text--primary">
-            <div>Lorem ipsum</div>
+              <v-card-text class="text--primary">
+                <div>Lorem ipsum</div>
 
-            <div>Lorem ipsum dolor sit</div>
-          </v-card-text>
+                <div>Lorem ipsum dolor sit</div>
+              </v-card-text>
 
-          <v-card-actions>
-            <v-btn
-              color="orange"
-              text
+              <v-card-actions>
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Share
+                </v-btn>
+
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+          <v-col class="d-flex justify-center" sm="12" lg="4">
+            <v-card
+              class="mx-10"
+              max-width="400"
             >
-              Share
-            </v-btn>
+              <v-img
+                class="white--text align-end"
+                height="200px"
+                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+              >
+                <v-card-title>Przygotowanie dokumentacji</v-card-title>
+              </v-img>
 
-            <v-btn
-              color="orange"
-              text
-            >
-              Explore
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card
-          class="mx-10"
-          max-width="400"
-        >
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-          >
-            <v-card-title>Przygotowanie dokumentacji</v-card-title>
-          </v-img>
+              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
 
-          <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
+              <v-card-text class="text--primary">
+                <div>Lorem ipsum</div>
 
-          <v-card-text class="text--primary">
-            <div>Lorem ipsum</div>
+                <div>Lorem ipsum dolor sit</div>
+              </v-card-text>
 
-            <div>Lorem ipsum dolor sit</div>
-          </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Share
+                </v-btn>
 
-          <v-card-actions>
-            <v-btn
-              color="orange"
-              text
-            >
-              Share
-            </v-btn>
-
-            <v-btn
-              color="orange"
-              text
-            >
-              Explore
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        </div>
+                <v-btn
+                  color="orange"
+                  text
+                >
+                  Explore
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-container>
       <v-container  class="d-flex flex-column my-10 grey lighten-5" height="800">
         <v-subheader class="text-h2 my-10">Oferta</v-subheader>

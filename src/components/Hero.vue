@@ -10,11 +10,11 @@
     <v-sheet 
       height="100%"
       width="100%"
-      class="d-flex transparent justify-start align-center"
+      class="d-flex transparent justify-center justify-lg-start align-center"
     >
       <v-card 
         hover    
-        class="transparent  ml-16"        
+        class="transparent ml-16"        
         max-height="30vh"
         max-width="25vw" 
         >
