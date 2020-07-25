@@ -1,0 +1,18 @@
+.supra-main {  
+  &__hero,
+  &__cards,
+  &__tabs,
+  &__text-content {
+    height: 80vh;
+  }
+  &__tab {
+    height: 100%;
+  }
+}
+.supra-contact__form,
+.supra-contact__data {
+  height: 80vh;
+}
+.container {
+  padding: 0;
+}

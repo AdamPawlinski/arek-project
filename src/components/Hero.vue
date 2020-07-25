@@ -1,10 +1,9 @@
 <template>
-  <v-carousel cycle continuous progress >
+  <v-carousel height="100%" cycle continuous progress >
     <v-carousel-item 
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
-      height="80%"
       transition="slide-x-transition"   
     > 
     <v-sheet 
@@ -38,11 +37,6 @@ export default {
   data () {
       return {
         items: [
-          // {
-          //   src: '../assets/pobrane.jpeg',
-          //   title: 'Finanse',
-          //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. '
-          // },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
             title: 'Kredyty',

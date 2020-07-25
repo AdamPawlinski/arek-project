@@ -1,6 +1,6 @@
  <template>
- <v-footer class="blue darken-2">
- <v-row
+  <v-footer class="blue darken-2">
+    <v-row
       justify="center"
       no-gutters
     >

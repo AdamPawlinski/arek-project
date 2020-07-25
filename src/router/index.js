@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../components/Main.vue'
+import Contact from '../components/Contact.vue'
+import Offer from '../components/Offer.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,16 @@ Vue.use(VueRouter)
     name: 'Main',
     component: Main
   },
+  {
+    path: '/kontakt',
+    name: 'Contact',
+    component: Contact
+  },
+    {
+      path: '/oferta',
+      name: 'Offer',
+      component: Offer
+    },
   {
     path: '/about',
     name: 'About',

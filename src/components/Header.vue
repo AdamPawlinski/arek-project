@@ -1,12 +1,14 @@
 <template>
   <v-app-bar app class="blue darken-2"> 
-      <v-toolbar-title>   
-        <v-img src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" :contain="true" />
+      <v-toolbar-title >  
+        <div to="/"> 
+          <v-img src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
+        </div>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu :open-on-click="true" class="d-none d-lg-block">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
             dark
             v-bind="attrs"
             v-on="on"
@@ -19,14 +21,18 @@
             v-bind="attrs"
             v-on="on"
             :text="true"
+            to="oferta"
           >
             Oferta
           </v-btn>
+          
+          <!-- <HeaderMenuOffer /> -->
           <v-btn
             dark
             v-bind="attrs"
             v-on="on"
             :text="true"
+            to="kontakt"
           >
             Kontakt
           </v-btn>
@@ -36,11 +42,15 @@
       </v-app-bar-nav-icon>   
   </v-app-bar>  
 </template>
-    <script>
-export default {
-  name: 'Header',
-  props: {
-    msg: String
+<script>
+  // import HeaderMenuOffer from "./HeaderMenuOffer"
+  export default {
+    name: 'Header',
+    components: {
+      // HeaderMenuOffer
+    },
+    props: {
+      msg: String
+    }
   }
-}
 </script>

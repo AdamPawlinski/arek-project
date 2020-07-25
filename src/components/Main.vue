@@ -2,23 +2,23 @@
   <div>    
     <!-- Sizes your content based upon application components -->
     <v-main class="pt-0">
-      <v-container fluid>        
+      <v-container class="supra-main__hero fill-height" fluid>        
         <Hero />          
       </v-container>
       <!-- Provides the application the proper gutter -->
-      <v-container fluid class="d-flex flex-column align-center">
+      <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0" >
         <v-row>
         <v-subheader class="text-h2 my-10">Finansowanie firm</v-subheader>
         </v-row>
         <v-row>
           <v-col class="d-flex justify-center" sm="12" lg="4">
             <v-card
-              class="mx-10"
-              max-width="400"
+              class="d-flex flex-column justify-space-around align-center mx-10"
+              max-width="20vw"              
             >
               <v-img
                 class="white--text align-end"
-                height="200px"
+                height="60%"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
                 <v-card-title>Analiza potrzeb</v-card-title>
@@ -34,29 +34,23 @@
 
               <v-card-actions>
                 <v-btn
-                  color="orange"
-                  text
+                  color="blue darken-2"
+                  outlined
                 >
                   Share
                 </v-btn>
 
-                <v-btn
-                  color="orange"
-                  text
-                >
-                  Explore
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>
           <v-col class="d-flex justify-center" sm="12" lg="4">
             <v-card
-              class="mx-10"
-              max-width="400"
+              class="d-flex flex-column justify-space-around align-center mx-10"
+              max-width="20vw"
             >
               <v-img
                 class="white--text align-end"
-                height="200px"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
                 <v-card-title>Przygotowanie dokumentacji</v-card-title>
@@ -72,29 +66,23 @@
 
               <v-card-actions>
                 <v-btn
-                  color="orange"
-                  text
+                  color="blue darken-2"
+                  outlined
                 >
                   Share
                 </v-btn>
 
-                <v-btn
-                  color="orange"
-                  text
-                >
-                  Explore
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>
           <v-col class="d-flex justify-center" sm="12" lg="4">
             <v-card
-              class="mx-10"
-              max-width="400"
+              class="d-flex flex-column justify-space-around align-center mx-10"
+              max-width="20vw"
             >
               <v-img
                 class="white--text align-end"
-                height="200px"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
                 <v-card-title>Przygotowanie dokumentacji</v-card-title>
@@ -110,37 +98,35 @@
 
               <v-card-actions>
                 <v-btn
-                  color="orange"
-                  text
+                  color="blue darken-2"
+                  outlined
                 >
-                  Share
-                </v-btn>
-
-                <v-btn
-                  color="orange"
-                  text
-                >
-                  Explore
+                  try
                 </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
       </v-container>
-      <v-container  class="d-flex flex-column my-10 grey lighten-5" height="800">
-        <v-subheader class="text-h2 my-10">Oferta</v-subheader>
+      <v-container  class="supra-main__tabs d-flex flex-column align-center my-10" >
+        <v-subheader class="text-h2 my-10" >Oferta</v-subheader>
         <v-tabs
          v-model="tab"
+         centered         
+         fixed-tabs
          class="blue darken-2"
         >
           <v-tab
             v-for="item in items"
-          :key="item.tab"
+            :key="item.tab"                       
           >
             {{item.tab}}
           </v-tab>
         </v-tabs>
-        <v-tabs-items v-model="tab">
+        <v-tabs-items 
+          v-model="tab"
+          class="supra-main__tab"
+        >
           <v-tab-item
             v-for="item in items"
             :key="item.tab"
@@ -151,7 +137,7 @@
           </v-tab-item>
         </v-tabs-items>
       </v-container>
-      <v-container class="d-flex flex-column grey lighten-5 my-10">
+      <v-container class="supra-main__text-content d-flex flex-column align-center my-10">
         <div>
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
