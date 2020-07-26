@@ -30,7 +30,7 @@
         class="supra-about-me__timeline-item"
         v-for="item in experience"
         color="blue darken-2"
-        :key="n"
+        :key="item.year"
         :fill-dot="fillDot"
         :hide-dot="hideDot"
         :icon="icon ? 'mdi-star' : ''"
