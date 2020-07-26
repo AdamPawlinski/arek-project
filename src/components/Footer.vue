@@ -6,13 +6,14 @@
     >
       <v-btn
         v-for="link in links"
-        :key="link"
+        :key="link.name"
         color="white"
         text
         rounded
         class="my-2"
+        :to="link.to"
       >
-        {{ link }}
+        {{ link.name }}
       </v-btn>
       <v-card-text>
         <v-btn
@@ -38,10 +39,22 @@ export default {
   name: "Footer",
   data: () => ({
       links: [
-        'Strona główna',
-        'O mnie',
-        'Oferta',
-        'Kontakt',
+        {
+          name: "Strona główna",
+          to: "/"
+        },
+        {
+          name: "O mnie",
+          to: "omnie"
+        },
+        {
+          name: "Oferta",
+          to: "oferta"
+        },
+        {
+          name: "Kontakt",
+          to: "kontakt"
+        },
       ],
       icons: [
         'mdi-facebook',

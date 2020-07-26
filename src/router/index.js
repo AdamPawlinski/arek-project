@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Main from '../components/Main.vue'
-import Contact from '../components/Contact.vue'
-import Offer from '../components/Offer.vue'
+import Main from '../components/Main'
+import Contact from '../components/Contact'
+import Offer from '../components/Offer'
+import AboutMe from '../components/AboutMe'
 
 Vue.use(VueRouter)
 
@@ -17,11 +18,16 @@ Vue.use(VueRouter)
     name: 'Contact',
     component: Contact
   },
-    {
-      path: '/oferta',
-      name: 'Offer',
-      component: Offer
-    },
+  {
+    path: '/oferta',
+    name: 'Offer',
+    component: Offer
+  },
+  {
+    path: '/omnie',
+    name: 'About Me',
+    component: AboutMe
+  },
   {
     path: '/about',
     name: 'About',

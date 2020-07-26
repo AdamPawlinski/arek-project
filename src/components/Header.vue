@@ -1,18 +1,23 @@
 <template>
-  <v-app-bar app class="blue darken-2"> 
-      <v-toolbar-title >  
-        <div to="/"> 
-          <v-img src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
-        </div>
+<nav>
+  <v-app-bar app class="blue darken-2" > 
+      <router-link to="/">
+        <v-img  src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
+      </router-link>
+      <v-toolbar-title> 
+        <router-link to="/"> 
+          <div class="supra-header__title white--text"> 
+            Supra Finanse
+          </div>
+        </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-menu :open-on-click="true" class="d-none d-lg-block">
-        <template v-slot:activator="{ on, attrs }">
           <v-btn
             dark
             v-bind="attrs"
             v-on="on"
             :text="true"
+            to="omnie"
           >
             O mnie
           </v-btn>
@@ -36,11 +41,10 @@
           >
             Kontakt
           </v-btn>
-        </template>
-      </v-menu>
       <v-app-bar-nav-icon class="d-lg-none">
       </v-app-bar-nav-icon>   
-  </v-app-bar>  
+  </v-app-bar> 
+</nav> 
 </template>
 <script>
   // import HeaderMenuOffer from "./HeaderMenuOffer"

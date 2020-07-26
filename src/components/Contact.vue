@@ -31,7 +31,7 @@
         <v-select
           v-model="select"
           :items="items"
-          :rules="[v => !!v || 'Item is required']"
+          :rules="[v => !!v || 'Wybierz właściwą opcję']"
           label="Osoba fizyczna / Firma"
           required
           class="mb-10"
@@ -47,16 +47,18 @@
 
         <v-btn
           :disabled="!valid"
-          color="success"
           class="mr-4"
+          color="blue darken-2"
+          outlined
           @click="validate"
         >
           Wyślij
         </v-btn>
 
-        <v-btn
-          color="error"
+        <v-btn          
           class="mr-4"
+          color="error"
+          outlined
           @click="reset"
         >
           Wyczyść formularz

@@ -23,24 +23,20 @@
               >
                 <v-card-title>Analiza potrzeb</v-card-title>
               </v-img>
-
               <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
-
               <v-card-text class="text--primary">
                 <div>Lorem ipsum</div>
 
                 <div>Lorem ipsum dolor sit</div>
               </v-card-text>
-
               <v-card-actions>
                 <v-btn
                   color="blue darken-2"
                   outlined
+                  to="kontakt"
                 >
-                  Share
-                </v-btn>
-
-                
+                  Sprawdź
+                </v-btn>                
               </v-card-actions>
             </v-card>
           </v-col>
@@ -68,11 +64,10 @@
                 <v-btn
                   color="blue darken-2"
                   outlined
+                  to="kontakt"
                 >
-                  Share
-                </v-btn>
-
-                
+                  Sprawdź
+                </v-btn>                
               </v-card-actions>
             </v-card>
           </v-col>
@@ -100,8 +95,9 @@
                 <v-btn
                   color="blue darken-2"
                   outlined
+                  to="kontakt"
                 >
-                  try
+                  Sprawdź
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -131,7 +127,9 @@
             v-for="item in items"
             :key="item.tab"
           >
-            <v-card flat>
+            <v-card class="pa-10">
+              <v-card-text class="text-left">{{ item.content }}</v-card-text>
+              <v-divider> </v-divider>
               <v-card-text class="text-left">{{ item.content }}</v-card-text>
             </v-card>
           </v-tab-item>
@@ -141,7 +139,7 @@
         <div>
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
-        <v-card :class="`elevation-${hover ? 10 : 0}`" class="d-flex flex-column align-center">
+        <v-card class="d-flex flex-column align-center pa-10">
           <v-card-text>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. 
@@ -151,7 +149,7 @@
               Proin vulputate turpis ac elit tempus laoreet. Proin sit amet ex non mi semper lobortis.
             </p>
           </v-card-text>
-          <v-img  class="rounded-circle" max-width="150px" max-height="300px" src="https://media-exp1.licdn.com/dms/image/C4D03AQGZwYlO7jTCyQ/profile-displayphoto-shrink_200_200/0?e=1599696000&v=beta&t=SP2G6ap8vTOPz3tecrJkqt-Bihc0tEZKIFTZPII4w-0" alt="Arkadiusz"></v-img>        
+          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz Sztaba"></v-img>        
         </v-card>
       </v-container>
     </v-main>
@@ -169,7 +167,7 @@ export default {
     return {
       tab: null,
       items: [
-        { tab: 'Kredyt firmowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
+        { tab: 'Kredyt firmowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare. Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
         { tab: 'Inwestycje', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
         { tab: 'Kredyt hipoteczny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },          
       ],

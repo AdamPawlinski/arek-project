@@ -27,7 +27,7 @@
           <v-btn
             color="blue darken-2"
             outlined
-            href="mailto:#"
+            to="kontakt"
           >
             Skontaktuj się
           </v-btn>
@@ -61,7 +61,7 @@
           <v-btn
             color="blue darken-2"
             outlined
-            href="mailto:#"
+            to="kontakt"
           >
             Skontaktuj się
           </v-btn>
@@ -95,7 +95,7 @@
           <v-btn
             color="blue darken-2"
             outlined
-            href="mailto:#"
+            to="kontakt"
           >
             Skontaktuj się
           </v-btn>

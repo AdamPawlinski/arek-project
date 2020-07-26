@@ -24,7 +24,7 @@
           {{item.subtitle}}
         </v-card-subtitle>
         <v-card-actions class="justify-center">
-            <v-btn large outlined color="grey lighten-5">{{item.button}}</v-btn>
+            <v-btn large outlined color="grey lighten-5" to="oferta">{{item.button}}</v-btn>
         </v-card-actions>
       </v-card>
     </v-sheet>
