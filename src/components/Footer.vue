@@ -18,9 +18,10 @@
       <v-card-text>
         <v-btn
           v-for="icon in icons"
-          :key="icon"
+          :key="icon.social"
           class="mx-4 white--text"
-          icon
+          icon.social
+          :href="icon.href"
         >
           <v-icon size="24px">{{ icon }}</v-icon>
         </v-btn>
@@ -57,10 +58,22 @@ export default {
         },
       ],
       icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
+        {
+          social: 'mdi-linkedin',
+          href: 'https://www.linkedin.com/in/arkadiusz-sztaba-6b70a5aa/'
+        },
+        {
+          social: 'mdi-facebook',
+          href: 'https://www.facebook.com/arkadiusz.sztaba.1'
+        },
+        {
+          social: 'mdi-twitter',
+          href: '/'
+        },
+        // {
+        //   social: 'goldenline',
+        //   to: '/'
+        // }
       ],
     }),
 }

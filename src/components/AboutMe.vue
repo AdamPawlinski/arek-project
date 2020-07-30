@@ -5,13 +5,12 @@
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
         <v-card class="d-flex flex-column align-center pa-10">
-          <v-card-text>
+          <v-card-text class="text-left">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. 
-              Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. 
-              Fusce nec venenatis orci. Nunc hendrerit orci risus, et egestas mi condimentum in. Nulla in pretium turpis. 
-              Maecenas quis pulvinar sem. Duis mattis ac ipsum id scelerisque. Quisque euismod varius metus, vitae viverra lorem maximus in. 
-              Proin vulputate turpis ac elit tempus laoreet. Proin sit amet ex non mi semper lobortis.
+              Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. Służę przy tym wiedzą zgromadzoną w trakcie ponad 16-letniej kariery w branży, którą realizowałem na stanowiskach kierowniczych w takich instytucjach jak Nest Bank, Plus Bank, Raiffeisen Bank czy Polbank. Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
+            </p>
+            <p>
+              Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  
             </p>
           </v-card-text>
           <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz"></v-img>        

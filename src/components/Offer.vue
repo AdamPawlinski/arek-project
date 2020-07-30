@@ -5,6 +5,27 @@
         class="d-flex flex-column justify-space-around align-center pa-12"
         width="50vw"
       >
+        <v-card-text class="text--primary text-h5">
+          <v-subheader class="pb-6 text-h3">Oferta</v-subheader>
+          <p class="pb-6  text-left">Współpracuję z kilkunastoma bankami, towarzystwami ubezpieczeniowymi  i leasingowymi  w Polsce mających w swojej ofercie Kredyty obrotowe, ratalne, inwestycyjne, leasing samochodów, maszyn i urządzeń, faktoring, dla firm, 
+            a także kredyty hipoteczne, gotówkowe i konsolidacyjne dla klientów indywidualnych, ubezpieczenia na życie, majątkowe, zdrowotne czy firmowe.</p>          
+        </v-card-text>
+        <v-card-actions>
+          <v-btn
+            color="blue darken-2"
+            outlined
+            to="kontakt"
+          >
+            Skontaktuj się
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-container>
+    <v-container class="supra-contact__data d-flex justify-center my-10">      
+      <v-card
+        class="d-flex flex-column justify-space-around align-center pa-12"
+        width="50vw"
+      >
         <v-card-subtitle class="pb-4 subtitle-1">Supra Finanse</v-card-subtitle>
 
         <v-card-text class="text--primary text-h5">

@@ -39,27 +39,21 @@ export default {
         items: [
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-            title: 'Kredyty',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. ',
+            title: 'Kredyty firmowe',
+            subtitle: 'Pozyskam dla Ciebie środki niezbędne do realizacji Twojego biznesplanu',
             button: 'Oferta'
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-            title: 'Pożyczki',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. ',
-            button: 'Oferta'
+            title: 'Kredyt hipoteczny',
+            subtitle: 'Decyzja o sfinansowaniu swojego lokum, jako inwestycji, czy do zamieszkania będzie łatwiejsza z profesjonalnym doradcą.',
+            button: 'Sprawdź'
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-            title: 'Lokaty',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. ',
-            button: 'Oferta'
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-            title: 'Inwestycje',
-            subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. ',
-            button: 'Oferta'
+            title: 'Leasing',
+            subtitle: 'Pomogę wyposażyć Twoją firmę w niezbędny sprzęt.',
+            button: 'Przekonaj się'
           },
         ],
       }

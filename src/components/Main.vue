@@ -1,14 +1,12 @@
 <template>
-  <div>    
-    <!-- Sizes your content based upon application components -->
+  <div>        
     <v-main class="pt-0">
       <v-container class="supra-main__hero fill-height" fluid>        
         <Hero />          
       </v-container>
-      <!-- Provides the application the proper gutter -->
       <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0" >
         <v-row>
-        <v-subheader class="text-h2 my-10">Finansowanie firm</v-subheader>
+        <v-subheader class="text-h2 my-10">Jak działam</v-subheader>
         </v-row>
         <v-row>
           <v-col class="d-flex justify-center" sm="12" lg="4">
@@ -21,7 +19,7 @@
                 height="60%"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
-                <v-card-title>Analiza potrzeb</v-card-title>
+                <v-card-title>Analizuję potrzeby</v-card-title>
               </v-img>
               <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
               <v-card-text class="text--primary">
@@ -49,7 +47,7 @@
                 class="white--text align-end"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
-                <v-card-title>Przygotowanie dokumentacji</v-card-title>
+                <v-card-title>Przygotowuję dokumentację</v-card-title>
               </v-img>
 
               <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
@@ -80,7 +78,7 @@
                 class="white--text align-end"
                 src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
               >
-                <v-card-title>Przygotowanie dokumentacji</v-card-title>
+                <v-card-title>Negocjuję finansowanie</v-card-title>
               </v-img>
 
               <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
@@ -105,7 +103,7 @@
         </v-row>
       </v-container>
       <v-container  class="supra-main__tabs d-flex flex-column align-center my-10" >
-        <v-subheader class="text-h2 my-10" >Oferta</v-subheader>
+        <v-subheader class="text-h2 my-10" >Oferuję</v-subheader>
         <v-tabs
          v-model="tab"
          centered         
@@ -140,16 +138,15 @@
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
         <v-card class="d-flex flex-column align-center pa-10">
+          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz Sztaba"></v-img>
           <v-card-text>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat dui nisi. 
-              Integer nisl dui, tincidunt sit amet lorem id, congue molestie nunc. Donec at ultricies diam. 
-              Fusce nec venenatis orci. Nunc hendrerit orci risus, et egestas mi condimentum in. Nulla in pretium turpis. 
-              Maecenas quis pulvinar sem. Duis mattis ac ipsum id scelerisque. Quisque euismod varius metus, vitae viverra lorem maximus in. 
-              Proin vulputate turpis ac elit tempus laoreet. Proin sit amet ex non mi semper lobortis.
+            <p class="text-left">
+              Nazywam się Arkadiusz Sztaba. Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. 
+              Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. 
+              Służę przy tym wiedzą zgromadzoną w trakcie ponad 16-letniej kariery w branży, którą realizowałem na stanowiskach kierowniczych w takich instytucjach jak Nest Bank, Plus Bank, Raiffeisen Bank czy Polbank. 
+              Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
             </p>
-          </v-card-text>
-          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz Sztaba"></v-img>        
+          </v-card-text>                  
         </v-card>
       </v-container>
     </v-main>
@@ -167,8 +164,8 @@ export default {
     return {
       tab: null,
       items: [
-        { tab: 'Kredyt firmowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare. Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
-        { tab: 'Inwestycje', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
+        { tab: 'Kredyt obrotowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare. Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
+        { tab: 'Kredyt inwestycyjny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
         { tab: 'Kredyt hipoteczny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },          
       ],
     }
