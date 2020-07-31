@@ -1,20 +1,16 @@
 <template>
   <div id="app">
     <v-app>
-      <v-alert
+      <v-dialog
       v-model="alert"
-      border="left"
-      close-text="Close Alert"
-      color="grey darken-3"      
-      dismissible
-      outlined
+      color="grey darken-3"  
       transition="scale-transition"
       class="mt-16 mb-n16"
     >
       Używamy cookies w celu świadczenia usług i statystyk. Brak zmiany
       ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
       urządzeniu. <v-btn href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
-    </v-alert>
+    </v-dialog>
       <v-breadcrumbs 
         v-for="page in breadcrumbs"
         :key="page.text"

@@ -4,7 +4,7 @@
       <v-container class="supra-main__hero fill-height" fluid>        
         <Hero />          
       </v-container>
-      <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0" >
+      <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0 my-10" >
         <v-row>
         <v-subheader class="text-h2 my-10">Jak działam</v-subheader>
         </v-row>

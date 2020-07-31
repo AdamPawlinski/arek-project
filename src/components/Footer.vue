@@ -20,10 +20,11 @@
           v-for="icon in icons"
           :key="icon.social"
           class="mx-4 white--text"
-          icon.social
+          icon
           :href="icon.href"
+          target="_blank"
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
+          <v-icon size="24px">{{ icon.social }}</v-icon>
         </v-btn>
       </v-card-text>
       <v-col
