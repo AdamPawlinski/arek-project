@@ -10,32 +10,40 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Main',
-    component: Main
+    component: Main,
+    meta: {
+      breadCrumb: 'Strona główna'
+    }
   },
   {
     path: '/kontakt',
-    name: 'Contact',
-    component: Contact
+    component: Contact,
+    meta: {
+      breadCrumb: 'Kontakt'
+    }
   },
   {
     path: '/oferta',
-    name: 'Offer',
-    component: Offer
+    component: Offer,
+    meta: {
+      breadCrumb: 'Oferta'
+    }
   },
   {
     path: '/omnie',
-    name: 'About Me',
-    component: AboutMe
+    component: AboutMe,
+    meta: {
+      breadCrumb: 'O mnie' 
+    }
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  // }
 ]
 
 const router = new VueRouter({

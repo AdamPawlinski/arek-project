@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="supra-contact__data d-flex justify-center my-10">
+    <v-container class="supra-contact__data d-flex justify-center my-10" :width="$vuetify.breakpoint.mobile">
       <v-card
         class="d-flex flex-column justify-space-around align-center pa-12"
         width="50vw"

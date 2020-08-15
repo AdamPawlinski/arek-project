@@ -1,6 +1,6 @@
 <template>
-<nav>
-  <v-app-bar app class="blue darken-2" > 
+<nav>  
+  <v-app-bar app hide-on-scroll class="supra-nav__header" color="black"> 
       <router-link to="/">
         <v-img  src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
       </router-link>
@@ -41,7 +41,7 @@
           >
             Kontakt
           </v-btn>
-      <v-app-bar-nav-icon class="d-lg-none">
+      <v-app-bar-nav-icon class="d-lg-none .d-xl-none">
       </v-app-bar-nav-icon>   
   </v-app-bar> 
 </nav> 

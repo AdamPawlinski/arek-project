@@ -6,148 +6,48 @@
       </v-container>
       <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0 my-10" >
         <v-row>
-        <v-subheader class="text-h2 my-10">Jak działam</v-subheader>
+          <v-col class="d-flex flex-column align-center">
+            <v-subheader class="text-h2 my-10">Supra Finanse</v-subheader> 
+            <v-divider class="supra-main__divider mt-16"></v-divider>    
+          </v-col>     
         </v-row>
         <v-row>
-          <v-col class="d-flex justify-center" sm="12" lg="4">
-            <v-card
-              class="d-flex flex-column justify-space-around align-center mx-10"
-              max-width="20vw"              
-            >
-              <v-img
-                class="white--text align-end"
-                height="60%"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title>Analizuję potrzeby</v-card-title>
-              </v-img>
-              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
-              <v-card-text class="text--primary">
-                <div>Lorem ipsum</div>
-
-                <div>Lorem ipsum dolor sit</div>
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                  color="blue darken-2"
-                  outlined
-                  to="kontakt"
-                >
-                  Sprawdź
-                </v-btn>                
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col class="d-flex justify-center" sm="12" lg="4">
-            <v-card
-              class="d-flex flex-column justify-space-around align-center mx-10"
-              max-width="20vw"
-            >
-              <v-img
-                class="white--text align-end"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title>Przygotowuję dokumentację</v-card-title>
-              </v-img>
-
-              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
-
-              <v-card-text class="text--primary">
-                <div>Lorem ipsum</div>
-
-                <div>Lorem ipsum dolor sit</div>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn
-                  color="blue darken-2"
-                  outlined
-                  to="kontakt"
-                >
-                  Sprawdź
-                </v-btn>                
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col class="d-flex justify-center" sm="12" lg="4">
-            <v-card
-              class="d-flex flex-column justify-space-around align-center mx-10"
-              max-width="20vw"
-            >
-              <v-img
-                class="white--text align-end"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-card-title>Negocjuję finansowanie</v-card-title>
-              </v-img>
-
-              <v-card-subtitle class="pb-0">Lorem ipsum</v-card-subtitle>
-
-              <v-card-text class="text--primary">
-                <div>Lorem ipsum</div>
-
-                <div>Lorem ipsum dolor sit</div>
-              </v-card-text>
-
-              <v-card-actions>
-                <v-btn
-                  color="blue darken-2"
-                  outlined
-                  to="kontakt"
-                >
-                  Sprawdź
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
+          <v-col class="text-left text-h5 mx-auto" cols="12" md="8">
+            <p>Supra Finanse to firma doradztwa finansowego. Specjalizuje się w dostarczaniu kompleksowych usług finansowych dla przedsiębiorstw i klienta indywidualnego. </p> 
+            <p>Niezależnie od tego, czego potrzebujesz, pomogę Ci, aby Twoje plany stały się rzeczywistością. </p>
+            <p>Na rynku finansowym działam od kilkunastu lat, i to doświadczenie pozwala mi na skuteczne, szybkie i dobrane do aktualnych potrzeb klientów, pozyskiwanie najatrakcyjniejszych ofert kredytów firmowych, konsumenckich, hipotecznych, leasingu, faktoringu czy ubezpieczeń.</p>
+            <p>Spotkajmy się, aby porozmawiać o Twoich potrzebach finansowych.</p>
+          </v-col>          
         </v-row>
       </v-container>
-      <v-container  class="supra-main__tabs d-flex flex-column align-center my-10" >
-        <v-subheader class="text-h2 my-10" >Oferuję</v-subheader>
-        <v-tabs
-         v-model="tab"
-         centered         
-         fixed-tabs
-         class="blue darken-2"
-        >
-          <v-tab
-            v-for="item in items"
-            :key="item.tab"                       
-          >
-            {{item.tab}}
-          </v-tab>
-        </v-tabs>
-        <v-tabs-items 
-          v-model="tab"
-          class="supra-main__tab"
-        >
-          <v-tab-item
-            v-for="item in items"
-            :key="item.tab"
-          >
-            <v-card class="pa-10">
-              <v-card-text class="text-left">{{ item.content }}</v-card-text>
-              <v-divider> </v-divider>
-              <v-card-text class="text-left">{{ item.content }}</v-card-text>
-            </v-card>
-          </v-tab-item>
-        </v-tabs-items>
+      <v-container  class="supra-main__call-to-action d-flex flex-column align-center justify-center my-10" fluid>
+        <v-subheader class="supra-main__subheader text-h2 my-10 white--text" height="15vh">
+          Chcesz wiedzieć więcej? <br>
+          Potrzebujesz pomocy?
+        </v-subheader>
+        <v-btn class="black--text text-h6 rounded-0" large width="25vw" height="8vh" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
       </v-container>
       <v-container class="supra-main__text-content d-flex flex-column align-center my-10">
-        <div>
-          <v-subheader class="text-h2 my-10">O mnie</v-subheader>
-        </div>
-        <v-card class="d-flex flex-column align-center pa-10">
-          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz Sztaba"></v-img>
-          <v-card-text>
-            <p class="text-left">
-              Nazywam się Arkadiusz Sztaba. Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. 
-              Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. 
-              Służę przy tym wiedzą zgromadzoną w trakcie ponad 16-letniej kariery w branży, którą realizowałem na stanowiskach kierowniczych w takich instytucjach jak Nest Bank, Plus Bank, Raiffeisen Bank czy Polbank. 
-              Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
-            </p>
-          </v-card-text>                  
-        </v-card>
+        <v-row>
+          <v-subheader class="text-h2 my-10">Oferta</v-subheader>
+        </v-row>
+        <v-row>
+          <v-col cols="12" md="3" v-for="card in cards" :key="card.title">
+             <v-hover v-slot:default="{ hover }">
+              <v-card hover class="pa-10" height="30vh" :color="hover ? '#2e3047' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+                <div class="supra-main__bullet mt-4"></div>
+                <div class="d-flex flex-column ml-6 my-n10">
+                  <v-card-title>{{card.title}}</v-card-title>
+                  <v-card-text>
+                    <p class="text-left">
+                      {{card.text}} 
+                    </p>
+                  </v-card-text>  
+                </div>                
+              </v-card>
+             </v-hover>
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
   </div>
@@ -162,12 +62,40 @@ export default {
   }, 
   data () {
     return {
-      tab: null,
-      items: [
-        { tab: 'Kredyt obrotowy', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare. Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
-        { tab: 'Kredyt inwestycyjny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },
-        { tab: 'Kredyt hipoteczny', content: 'Nam urna enim, dapibus at ornare eu, bibendum dignissim lacus. Sed faucibus ut velit vitae dictum. Cras iaculis lectus eget lacus posuere, vitae dignissim mi volutpat. Nulla ac pharetra dui, sollicitudin consequat risus. Suspendisse viverra quam vel tortor vulputate feugiat. Aenean blandit nisi sit amet fermentum aliquam. Sed feugiat nisi at auctor ornare.' },          
-      ],
+      cards: [
+        {
+          title: "Kredyt obrotowy",
+          text: "na dowolny cel, to kredyt przeznaczony na finansowanie bieżącej działalności przedsiębiorstwa, umożliwiający zachowanie płynności finansowej Twojej firmy. Może być przeznaczony na zakup towarów, materiałów, usług czy pokrycie kosztów zatrudnienia personelu."
+        },
+        {
+          title: "Kredyt inwestycyjny",
+          text: "to kredyty przeznaczone na konkretne przedsięwzięcia inwestycyjne przedsiębiorstwa, między innymi na takie jak: zakup środków trwałych, samochodów, maszyn i urządzeń, zakup, budowę, rozbudowę, modernizację czy remont nieruchomości komercyjnych, refinansowanie wydatków inwestycyjnych poniesionych w okresie ostatnich 12 m-cach. "
+        },
+        {
+          title: "Kredyt konsolidacyjny",
+          text: "Kredyt konsolidacyjny to kredyt dzięki któremu łączysz kilka kredytów w jeden jakim z niższą miesięczną ratą niż suma dotychczasowych rat"
+        },
+        {
+          title: "Kredyt na spłatę ZUS i US.",
+          text: "zaległości wobec Zakładu Ubezpieczeń Społecznych lub Urzędu Skarbowego potrafią utrudnić lub całkowicie zniweczyć uzyskanie finansowania na bieżącą działalność przedsiębiorstwa lub długofalowe cele inwestycyjne. Pomagam uzyskać finansowanie na spłatę zaległości wobec w/w instytucji."
+        },
+        {
+          title: "Kredyt hipoteczny",
+          text: "Wybór kredytu hipotecznego to nie lada wyzwanie. Pomogę Ci przebrnąć przez gąszcz ofert bankowych i wybrać najkorzystniejszą dla Ciebie lub Twojej firmy."
+        },
+        {
+          title: "Leasing",
+          text: "Leasing to umowa zawierana pomiędzy leasingodawcą a leasingobiorcą, na mocy której leasingodawca oddaje do użytkowania daną rzecz leasingobiorcy, w zamian za ustaloną w umowie opłatą uiszczaną co miesiąc."
+        },
+        {
+          title: "Ubezpieczenie",
+          text: "Wybór kredytu hipotecznego to nie lada wyzwanie. Pomogę Ci przebrnąć przez gąszcz ofert bankowych i wybrać najkorzystniejszą dla Ciebie lub Twojej firmy."
+        },
+        {
+          title: "Faktoring",
+          text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu (faktora) nieprzeterminowanych wierzytelności przedsiębiorstw (faktorantów) należnych im od kontrahentów (odbiorców) z tytułu dostaw i usług oraz na świadczeniu na ich rzecz dodatkowych usług "
+        },
+      ]
     }
   },
   props: {

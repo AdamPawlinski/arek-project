@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <v-app>
-      <v-dialog
-      v-model="alert"
-      color="grey darken-3"  
-      transition="scale-transition"
-      class="mt-16 mb-n16"
-    >
-      Używamy cookies w celu świadczenia usług i statystyk. Brak zmiany
-      ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
-      urządzeniu. <v-btn href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
-    </v-dialog>
-      <v-breadcrumbs 
-        v-for="page in breadcrumbs"
-        :key="page.text"
+    <v-app>      
+      <!-- <v-breadcrumbs 
+        :items="breadcrumbs"
+        divider="-"
         class="mt-16"
       >
-        <v-breadcrumbs-item>{{page.text}} </v-breadcrumbs-item>
-      </v-breadcrumbs>
-      <Header app/>
-      <router-view>
+      </v-breadcrumbs> -->     
+          
+      <Header />
+      <v-alert
+        class="mt-16 mb-n16 mb-0 rounded-0"
+        dismissible
+        colored-border
+        type="info"
+        elevation="2"
+        value
+        app
+      >
+          Używamy cookies w celu świadczenia usług i statystyk. Brak zmiany
+          ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
+          urządzeniu. <v-btn text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
+      </v-alert> 
+      <router-view class="mt-16">
         <Main />
       </router-view>
-      <Footer app />
+      <Footer />
     </v-app>
   </div>
 </template>
@@ -38,13 +41,27 @@ export default {
   },
   data() {
     return {
-      breadcrumbs: [
-        {
-          text: 'Main',
-          disabled: true,
-          href: 'breadcrumbs_dashboard',
-        },
-      ]
+      dialog: false
+    }
+  },
+  mounted () {
+    console.log(this.$vuetify.breakpoint)
+  },
+  computed: {
+    breadcrumbs() {
+      let pathArray = this.$route.path.split('/') 
+       pathArray.shift()
+      console.log(pathArray)
+      let breadcrumbs = pathArray.map(
+        (path, index, breadcrumbArray)  => {
+          console.log(this.$route.matched[index], path)
+          breadcrumbArray.push(
+            this.$route.matched[index].meta.breadCrumb || path,
+          );
+          return breadcrumbArray
+        }
+      ) 
+     return breadcrumbs
     }
   }
 }

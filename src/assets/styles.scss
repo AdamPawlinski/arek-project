@@ -1,12 +1,29 @@
 .supra-main {  
   &__hero,
   &__cards,
-  &__tabs,
   &__text-content {
-    height: 80vh;
+    height: 90vh;
   }
   &__tab {
     height: 100%;
+  }
+  &__divider {
+    max-height: 4px;
+    height: 4px;
+    width: 10vw;
+    background-color: #3bbb9a;
+  }
+  &__call-to-action {
+    height: 40vh;
+    background-color: #3bbb9a;
+  }
+  &__subheader {
+    height: 15vh;
+  }
+  &__bullet {
+    width: 25px;
+    height: 25px;
+    background-color: #3bbb9a;
   }
 }
 a {
@@ -21,4 +38,32 @@ a {
 }
 .container {
   padding: 0;
+}
+.supra-nav {
+  &__header {
+    background-color: #46475b;
+    opacity: .5
+  }
+}
+.supra-hero {
+  &__container {
+    position: relative;
+    height: 90vh;    
+  }
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50;
+    transform: transition3d(-50%, -50%, 0);
+    height: 4vh;
+    width: 2vw;
+    color: #FFF;
+    background-color: #3bbb9a;
+  }
+}
+.v-carousel__controls {
+  height: 10vh;
 }
