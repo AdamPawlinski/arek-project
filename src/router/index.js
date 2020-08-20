@@ -4,6 +4,7 @@ import Main from '../components/Main'
 import Contact from '../components/Contact'
 import Offer from '../components/Offer'
 import AboutMe from '../components/AboutMe'
+import Error from '../components/Error'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,13 @@ Vue.use(VueRouter)
     component: AboutMe,
     meta: {
       breadCrumb: 'O mnie' 
+    }
+  },
+  {
+    path: '/*',
+    component: Error,
+    meta: {
+      breadCrumb: '404 page'
     }
   },
   // {

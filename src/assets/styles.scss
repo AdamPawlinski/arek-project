@@ -1,3 +1,18 @@
+.supra-header {
+  &__button {
+    background-color: none; 
+    border-radius: 0; 
+    &::before {
+      background-color: transparent; 
+    }   
+    &:hover {
+      border-bottom: 1px solid #3bbb9a;
+    } 
+    &--active {
+      border-bottom: 1px solid #3bbb9a;
+    }
+  }
+}
 .supra-main {  
   &__hero,
   &__cards,
@@ -16,6 +31,9 @@
   &__call-to-action {
     height: 40vh;
     background-color: #3bbb9a;
+    background-image: url('../src/assets/question_mark.png');
+    background-position: center;
+    background-size: 20vh;
   }
   &__subheader {
     height: 15vh;
@@ -24,6 +42,9 @@
     width: 25px;
     height: 25px;
     background-color: #3bbb9a;
+  }
+  &__content {
+    height: 100%;
   }
 }
 a {
@@ -39,16 +60,13 @@ a {
 .container {
   padding: 0;
 }
-.supra-nav {
-  &__header {
-    background-color: #46475b;
-    opacity: .5
-  }
-}
 .supra-hero {
   &__container {
     position: relative;
     height: 90vh;    
+  }
+  &__item .v-image__image.v-image__image--cover {
+    box-shadow: inset 0 0 0 1000px rgba(46, 48, 71, 0.8);
   }
   &__arrow {
     display: flex;
@@ -56,14 +74,21 @@ a {
     justify-content: center;
     position: absolute;
     bottom: 0;
-    left: 50;
-    transform: transition3d(-50%, -50%, 0);
-    height: 4vh;
-    width: 2vw;
+    left: 50%;
+    padding: 10px;
+    transform: translate3d(-50%, 50%, 0);
     color: #FFF;
     background-color: #3bbb9a;
+    &--up {
+      left: 85%;
+      bottom: 50%;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 .v-carousel__controls {
-  height: 10vh;
+  height: 15vh;
+}
+.supra-footer {
+  position: relative;
 }
