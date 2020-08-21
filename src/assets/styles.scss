@@ -1,3 +1,6 @@
+.supra-app {
+  position: relative;
+}
 .supra-header {
   &__button {
     background-color: none; 
@@ -12,6 +15,15 @@
       border-bottom: 1px solid #3bbb9a;
     }
   }
+}
+.supra-content {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.supra-alert {
+  position: absolute;
+  top: 64px;
+  z-index: 1;
 }
 .supra-main {  
   &__hero,
@@ -82,6 +94,7 @@ a {
     &--up {
       left: 85%;
       bottom: 50%;
+      border-radius: 0;
       transform: translate3d(0, 0, 0);
     }
   }

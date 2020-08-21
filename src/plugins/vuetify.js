@@ -13,5 +13,12 @@ export default new Vuetify({
         accent: colors.blue.darken1, 
       },
     },
+    breakpoint: {
+      thresholds: {
+        sm: 320,
+        md: 640,
+        lg: 1140,
+      },
+    },
   },
 });

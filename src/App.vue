@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-app>      
+    <v-app class="supra-app">      
       <!-- <v-breadcrumbs 
         :items="breadcrumbs"
         divider="-"
@@ -10,20 +10,23 @@
           
       <Header />
       <v-alert
-        class="mt-16 mb-n16 mb-0 rounded-0"
+        class="supra-alert rounded-0"
         dismissible
         colored-border
         type="info"
         elevation="2"
         value
         app
+        transition="fade-transition"
       >
           Używamy cookies w celu świadczenia usług i statystyk. Brak zmiany
           ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
           urządzeniu. <v-btn text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
       </v-alert> 
-      <router-view class="mt-16">
-        <Main />
+      <router-view 
+        class="supra-content"
+      >          
+          <Main />
       </router-view>
       <Footer />
     </v-app>

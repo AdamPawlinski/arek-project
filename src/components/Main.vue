@@ -1,10 +1,10 @@
 <template>
   <div>        
-    <v-main class="pt-0">
-      <v-container class="supra-main__hero fill-height" fluid>        
+    <v-main class="pt-0" id="main">
+      <v-container fluid class="supra-main__hero fill-height" >        
         <Hero />          
       </v-container>
-      <v-container fluid class="supra-main__cards d-flex flex-column align-center px-0 my-10" >
+      <v-container  class="supra-main__cards d-flex flex-column align-center px-0 my-10" >
         <v-row>
           <v-col class="d-flex flex-column align-center">
             <v-subheader class="text-h2 font-weight-medium mt-10">Supra Finanse</v-subheader> 
@@ -28,12 +28,12 @@
         </v-subheader>
         <v-btn class="black--text text-h6 text-none rounded-0" large elevation="0" width="25vw" height="8vh" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
       </v-container>
-      <v-container class="supra-main__text-content d-flex flex-column align-center my-10">
+      <v-container class="supra-main__text-content d-flex flex-column align-center my-10" fluid>
         <v-row>
           <v-subheader class="text-h2 font-weight-medium my-10"> Oferta</v-subheader>
         </v-row>
         <v-row>
-          <v-col cols="12" md="3" v-for="card in cards" :key="card.title">
+          <v-col cols="12" md="6" lg="3" v-for="card in cards" :key="card.title">
              <v-hover v-slot:default="{ hover }">
               <v-card class="pa-5" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
