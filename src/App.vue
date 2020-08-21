@@ -25,7 +25,7 @@
       </v-alert> 
       <router-view 
         class="supra-content"
-      >          
+      >         
           <Main />
       </router-view>
       <Footer />

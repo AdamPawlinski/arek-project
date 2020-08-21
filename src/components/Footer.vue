@@ -1,5 +1,6 @@
  <template>
-  <v-footer class="supra-footer white--text"  color="rgba(46, 48, 71, 0.8)">    
+  <v-footer class="supra-footer white--text"  color="rgba(46, 48, 71, 0.8)">  
+    <v-container>  
     <v-row
       justify="center"
       no-gutters
@@ -68,6 +69,7 @@
         <span> Projekt graficzny marcinsuliga.eu </span>
       </v-col>
     </v-row>
+    </v-container>
        <v-btn
         href="#main"
         class="supra-hero__arrow supra-hero__arrow--up pa-2 mx-4 white--text"

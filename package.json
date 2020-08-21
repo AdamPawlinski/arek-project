@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@storefront-ui/vue": "^0.7.17",
+    "aos": "^3.0.0-beta.6",
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
     "gh-pages": "^3.1.0",

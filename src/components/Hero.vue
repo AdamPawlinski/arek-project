@@ -34,7 +34,7 @@
   </v-container>
 </template>
 <script>
-import heroImage from '../assets/arek-hero.jpg'
+import heroImage from '../assets/arek-hero.png'
 export default {
   name: "Hero", 
   data () {
@@ -58,5 +58,10 @@ export default {
         ],
       }
     }, 
+    mounted: {
+      reveal() {
+
+      }
+    }
 }
 </script>

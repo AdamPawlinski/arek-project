@@ -1,3 +1,4 @@
+
 .supra-app {
   position: relative;
 }
@@ -16,10 +17,10 @@
     }
   }
 }
-.supra-content {
-  max-width: 1140px;
-  margin: 0 auto;
-}
+// .supra-content {
+//   max-width: 1140px;
+//   margin: 0 auto;
+// }
 .supra-alert {
   position: absolute;
   top: 64px;
@@ -71,14 +72,18 @@ a {
 }
 .container {
   padding: 0;
+  // max-width: 1140px;
 }
 .supra-hero {
   &__container {
     position: relative;
-    height: 90vh;    
+    height: 100vh;    
   }
   &__item .v-image__image.v-image__image--cover {
-    box-shadow: inset 0 0 0 1000px rgba(46, 48, 71, 0.8);
+    box-shadow: inset 0 0 0 1000px rgba(46, 48, 71, 0.8); 
+    background-position: 100% !important;   
+    background-size: contain;
+    background-color: #ddddd6;
   }
   &__arrow {
     display: flex;
@@ -101,6 +106,10 @@ a {
 }
 .v-carousel__controls {
   height: 15vh;
+  .v-item-group {
+    position: absolute;
+    left: 10%;
+  }
 }
 .supra-footer {
   position: relative;
