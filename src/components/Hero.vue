@@ -22,7 +22,7 @@
               {{item.title}}
             </v-card-title>
             <v-card-actions class="justify-start">
-                <v-btn class="black--text text-h5 rounded-0" outlined large width="15vw" height="5vh" color="white" to="kontakt">{{item.button}}</v-btn>
+                <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">{{item.button}}</v-btn>
             </v-card-actions>
           </v-card>      
         </v-sheet>

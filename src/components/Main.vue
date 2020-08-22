@@ -1,6 +1,6 @@
 <template>
   <div>        
-    <v-main class="pt-0" id="main">
+    <v-main class="supra-main pt-0" id="main">
       <v-container fluid class="supra-main__hero fill-height" 
         data-aos="fade-up"
         data-aos-offset="200"
@@ -8,7 +8,7 @@
       >        
         <Hero />          
       </v-container>
-      <v-container  fluid class="supra-main__cards d-flex flex-column align-center px-0 my-10" 
+      <v-container  fluid class="supra-main__cards d-flex flex-column align-center pa-10 pa-md-0 my-10" 
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="50"
@@ -38,7 +38,7 @@
           Chcesz wiedzieć więcej?
           Potrzebujesz pomocy?
         </v-subheader>
-        <v-btn class="black--text text-h6 text-none rounded-0" large elevation="0" width="25vw" height="8vh" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
+        <v-btn class="black--text text-h6 text-none rounded-0 pa-7" large elevation="0" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
       </v-container>
       <v-container class="supra-main__text-content d-flex flex-column align-center my-10" >
         <v-row>
@@ -51,7 +51,7 @@
             :data-aos-delay="i * 50"
           >
              <v-hover v-slot:default="{ hover }">
-              <v-card class="supra-main__card pa-5" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="25vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
                 <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
                   <v-card-title>{{card.title}}</v-card-title>

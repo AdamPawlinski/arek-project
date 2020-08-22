@@ -1,4 +1,3 @@
-
 .supra-app {
   position: relative;
 }
@@ -17,18 +16,13 @@
     }
   }
 }
-// .supra-content {
-//   max-width: 1140px;
-//   margin: 0 auto;
-// }
 .supra-alert {
   position: absolute;
   top: 64px;
   z-index: 1;
 }
-.supra-main {  
+.supra-main { 
   &__hero,
-  &__cards,
   &__text-content {
     height: 100vh;
   }
@@ -60,10 +54,10 @@
     height: 100%;
   }
   &__card {
-    position: relative;
+    position: relative;    
     &-button {
       position: absolute;
-      bottom: 5%;
+      bottom: 1%;
     }
   } 
 }
