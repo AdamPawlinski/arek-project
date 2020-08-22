@@ -1,5 +1,5 @@
  <template>
-  <v-footer class="supra-footer white--text"  color="rgba(46, 48, 71, 0.8)">  
+  <v-footer class="supra-footer white--text py-10"  color="rgba(46, 48, 71, 0.8)">  
     <v-container>  
     <v-row
       justify="center"
@@ -29,25 +29,27 @@
           </v-list-item>
         </v-list>
       </v-col>
-      <v-col cols="3" class="d-flex flex-column align-start">
-        <v-btn
-          v-for="link in links"
-          :key="link.name"
-          color="white"
-          text
-          class="my-2"
-          :to="link.to"
-        >
-          {{ link.name }}
-        </v-btn>
+      <v-col cols="3" class="d-flex justify-end">
+        <div class="d-flex flex-column align-start">
+          <v-btn
+            v-for="link in links"
+            :key="link.name"
+            color="white"
+            text
+            class="supra-footer__nav-links my-2"
+            :to="link.to"
+          >
+            {{ link.name }}
+          </v-btn>
+        </div>
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="6" class="d-flex justify-start">
         <v-btn class="black--text text-h5 rounded-0" outlined large width="15vw" height="5vh" color="white" to="kontakt">Spotkajmy się</v-btn>
       </v-col>
       <v-col cols="6">
-        <v-card-text>
+        <v-card-text class="d-flex justify-end">
         <v-btn
           v-for="icon in icons"
           :key="icon.social"
@@ -62,22 +64,24 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="6">
+      <v-col cols="6" class="d-flex justify-start">
         {{ new Date().getFullYear() }} — <strong>Supra Finanse</strong>
       </v-col>
-      <v-col cols="6" >
+      <v-col cols="6" class="d-flex justify-end">
         <span> Projekt graficzny marcinsuliga.eu </span>
       </v-col>
     </v-row>
     </v-container>
+      <div class="">
        <v-btn
         href="#main"
-        class="supra-hero__arrow supra-hero__arrow--up pa-2 mx-4 white--text"
+        class="supra-hero__arrow supra-hero__arrow--up py-6 white--text"
         color="#3bbb9a" 
         @click="$vuetify.goTo(target, options)"       
       >
         <v-icon large>mdi-arrow-up </v-icon>
       </v-btn>
+      </div>      
  </v-footer>
 </template>
 <script>

@@ -30,7 +30,7 @@
   &__hero,
   &__cards,
   &__text-content {
-    height: 90vh;
+    height: 100vh;
   }
   &__tab {
     height: 100%;
@@ -56,9 +56,16 @@
     height: 25px;
     background-color: #3bbb9a;
   }
-  &__content {
+  &__content {    
     height: 100%;
   }
+  &__card {
+    position: relative;
+    &-button {
+      position: absolute;
+      bottom: 5%;
+    }
+  } 
 }
 a {
   text-decoration: none;
@@ -72,7 +79,6 @@ a {
 }
 .container {
   padding: 0;
-  // max-width: 1140px;
 }
 .supra-hero {
   &__container {
@@ -99,6 +105,8 @@ a {
     &--up {
       left: 85%;
       bottom: 50%;
+      width: 40px;
+      height: 40px;
       border-radius: 0;
       transform: translate3d(0, 0, 0);
     }
@@ -113,4 +121,7 @@ a {
 }
 .supra-footer {
   position: relative;
+  .v-btn--active::before {
+    background-color: transparent;
+  }  
 }

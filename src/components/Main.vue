@@ -51,7 +51,7 @@
             :data-aos-delay="i * 50"
           >
              <v-hover v-slot:default="{ hover }">
-              <v-card class="pa-5" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <v-card class="supra-main__card pa-5" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
                 <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
                   <v-card-title>{{card.title}}</v-card-title>
@@ -60,7 +60,7 @@
                       {{card.text}} 
                     </p>
                   </v-card-text> 
-                  <v-card-actions class="mt-n8">
+                  <v-card-actions class="supra-main__card-button mt-n8">
                     <v-btn text :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
                   </v-card-actions> 
                 </div>                
