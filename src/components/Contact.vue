@@ -8,14 +8,12 @@
       >
         <v-text-field
           v-model="name"
-          :counter="10"
           :rules="nameRules"
           label="Imię"
           required
         ></v-text-field>
         <v-text-field
           v-model="lastName"
-          :counter="10"
           :rules="nameRules"
           label="Nazwisko"
           required
@@ -37,10 +35,21 @@
           class="mb-10"
         ></v-select>
 
+        <v-textarea
+          v-model="question"
+          :counter="200"
+          :rules="questionRules"
+          label="Pytanie"
+          rows="1"
+          auto-grow
+          clearable
+          required
+        ></v-textarea>
+
         <v-checkbox
           v-model="checkbox"
           :rules="[v => !!v || 'Zaakceptuj żeby wysłać.']"
-          label="Wyrażam zgodę na przetwarzane moich danych osobowych."
+          label="Wyrażam zgodę na przetwarzane moich danych osobowych ${\n} przez Supra Finanse Arkadiusz Sztaba."
           required
           class="mb-10"
         ></v-checkbox>
@@ -99,7 +108,6 @@ export default {
       name: '',
       nameRules: [
         v => !!v || 'Uzupełnij pole',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
       ],
       email: '',
       emailRules: [
@@ -110,6 +118,11 @@ export default {
       items: [
         'Osoba fizyczna',
         'Firma'
+      ],
+      question: null,
+      questionRules: [
+        v => !!v || 'Uzupełnij pole',
+        v => (v && v.length <= 200) || 'Pytanie nie może być dłuższe niż 200 znaków',
       ],
       checkbox: false,
       lazy: false,

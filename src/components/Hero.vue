@@ -17,6 +17,8 @@
             max-height="30vh"
             max-width="50vw" 
             elevation="0"
+            data-aos="flip-up"
+            data-aos-delay="300"
             >
             <v-card-title class="text-h2 align-self-start text-left justify-start font-weight-medium">
               {{item.title}}
