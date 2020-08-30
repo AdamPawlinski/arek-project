@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="supra-contact">
     <v-container class="supra-contact__form d-flex justify-center align-center">
       <v-form
         ref="form"
         v-model="valid"
-        lazy-validation        
+        lazy-validation                
       >
         <v-text-field
           v-model="name"
@@ -49,10 +49,14 @@
         <v-checkbox
           v-model="checkbox"
           :rules="[v => !!v || 'Zaakceptuj żeby wysłać.']"
-          label="Wyrażam zgodę na przetwarzane moich danych osobowych ${\n} przez Supra Finanse Arkadiusz Sztaba."
           required
           class="mb-10"
-        ></v-checkbox>
+        >
+          <template #label>
+            <span>Zapoznałem się z <a href="#/privacy_policy" @click.stop>POLITYKĄ PRYWATNOŚCI</a> i ją akceptuję oraz wyrażam zgodę na przetwarzanie danych osobowych. zgodnie z art. 13 ust. 1 i ust. 2 oraz art. 14 ust. 1 i ust. 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/56/ WE (dalej jako: „RODO”) stosowanego od 25 maja 2018 r.
+            </span>
+          </template>
+        </v-checkbox>
 
         <v-btn
           :disabled="!valid"
@@ -83,8 +87,8 @@
 
         <v-card-text class="text--primary text-h5">
           <p>Arkadiusz Sztaba</p>
-          <p>ul. Bogata 100</p>
-          <p>50-555 Wrocław</p>
+          <p><v-icon medium>mdi-phone</v-icon> <a href="tel:530124047">530 124 047</a></p>
+          <p><v-icon medium>mdi-at</v-icon> a.sztaba@suprafinanse.pl</p>
         </v-card-text>
 
         <v-card-actions>
@@ -100,7 +104,7 @@
     </v-container>
   </div>
 </template>
-<script>
+<script> 
 export default {
   name: "Contact", 
    data: () => ({

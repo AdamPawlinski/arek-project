@@ -1,12 +1,12 @@
  <template>
-  <v-footer class="white--text py-10"  color="rgba(46, 48, 71, 0.8)">  
+  <v-footer app absolute class="white--text py-10"  color="rgba(46, 48, 71, 0.8)">  
     <v-container class="supra-footer">  
     <v-row
       justify="center"
       no-gutters
     >
       <v-col cols="12" lg="6" class="d-flex flex-column align-center align-lg-start">
-        <v-img  class="mb-10" src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
+        <!-- <v-img  class="mb-10" src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain /> -->
         <p class="text-left ml-6">
           Specjalizuję się w dostarczaniu <br>kompleksowych uslug finansowych <br>dla przedsiębiorstw <br>oraz klienta indywidualnego.
         </p>
@@ -23,7 +23,7 @@
               color="white"
               text
               class="my-2"
-              to="offer"
+              :to="offer.to"
             >
               {{offer.title}}
             </v-btn>
@@ -70,9 +70,9 @@
       <v-col cols="12" lg="6" class="d-flex justify-center justify-lg-start">
         {{ new Date().getFullYear() }} — <strong>Supra Finanse</strong>
       </v-col>
-      <v-col cols="12" lg="6" class="d-flex justify-center justify-lg-end">
+      <!-- <v-col cols="12" lg="6" class="d-flex justify-center justify-lg-end">
         <span> Projekt graficzny marcinsuliga.eu </span>
-      </v-col>
+      </v-col> -->
     </v-row>
     </v-container>
       <div class="">
@@ -94,27 +94,35 @@ export default {
     offers: [
         {
           title: "Kredyt obrotowy",
+          to: "oferta"
         },
         {
           title: "Kredyt inwestycyjny",
+          to: "oferta"
         },
         {
           title: "Kredyt konsolidacyjny",
+          to: "oferta"
         },
         {
-          title: "Kredyt na spłatę ZUS i US.",
+          title: "Kredyt na spłatę ZUS i US",
+          to: "oferta"
         },
         {
           title: "Kredyt hipoteczny",
+          to: "oferta"
         },
         {
           title: "Leasing",
+          to: "oferta"
         },
         {
           title: "Ubezpieczenie",
+          to: "oferta"
         },
         {
           title: "Faktoring",
+          to: "oferta"
         },
       ],
       links: [
@@ -153,7 +161,7 @@ export default {
         //   to: '/'
         // }
       ],
-      target: ".supra-main__hero",
+      target: ".supra-nav__header",
       options: {
         duration: 300,
         offset: 0,

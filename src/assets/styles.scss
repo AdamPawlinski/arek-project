@@ -50,11 +50,11 @@
     height: 25px;
     background-color: #3bbb9a;
   }
-  &__content {    
-    height: 100%;
-  }
+  // &__content {    
+  //   height: 100%;
+  // }
   &__card {
-    position: relative;    
+    position: relative; 
     &-button {
       position: absolute;
       bottom: 1%;
@@ -106,8 +106,11 @@ a {
     }
   }
 }
-.supre-offer {
-  height: 100vh;
+.supra-privacy-policy,
+.supra-about-me,
+.supra-contact,
+.supra-offer {
+  margin-bottom: 700px; 
 }
 .v-carousel__controls {
   height: 15vh;

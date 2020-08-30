@@ -5,6 +5,7 @@ import Main from '../components/Main'
 import Contact from '../components/Contact'
 import Offer from '../components/Offer'
 import AboutMe from '../components/AboutMe'
+import PrivacyPolicy from '../components/PrivacyPolicy'
 import Error from '../components/Error'
 
 Vue.use(VueRouter)
@@ -36,6 +37,13 @@ Vue.use(VueRouter)
     component: AboutMe,
     meta: {
       breadCrumb: 'O mnie' 
+    }
+  },
+  {
+    path: '/privacy_policy',
+    component: PrivacyPolicy,
+    meta: {
+      breadCrumb: 'Polityka prywatności'
     }
   },
   {

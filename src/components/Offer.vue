@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-container class="supra-offer my-10 fill-height" :width="$vuetify.breakpoint.mobile" fluid>
+    <v-container class="supra-offer d-flex flex-column align-center justify-center mt-10"  fluid>
       <v-row>
         <v-img src="../assets/offer_background.png" width="100vw" max-height="200px" contain></v-img>
       </v-row>
         <v-row>
-          <v-col class="d-flex flex-column align-center">
+          <v-col class="d-flex flex-column align-center my-10 mx-auto" cols="12" md="8">
             <v-subheader class="text-h2 font-weight-medium mt-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
             <v-divider class="supra-main__divider my-16"></v-divider>  
             <v-subheader class="text-h5 font-weight-regular my-5">
@@ -14,14 +14,14 @@
             </v-subheader>               
           </v-col>     
         </v-row>  
-        <v-row height="100vh">
-          <v-col cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.title"
+        <v-row >
+          <v-col class="mx-auto" cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.title"
             data-aos="fade-up"
             data-aos-offset="200"
             :data-aos-delay="i * 50"
           >
              <v-hover v-slot:default="{ hover }">
-              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="25vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
                 <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
                   <v-card-title>{{card.title}}</v-card-title>
@@ -30,9 +30,9 @@
                       {{card.text}} 
                     </p>
                   </v-card-text> 
-                  <v-card-actions class="supra-main__card-button mt-n8">
+                  <!-- <v-card-actions class="supra-main__card-button mt-n8">
                     <v-btn text :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
-                  </v-card-actions> 
+                  </v-card-actions>  -->
                 </div>                
               </v-card>
              </v-hover>

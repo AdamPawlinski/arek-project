@@ -1,9 +1,9 @@
 <template>
 <nav>  
   <v-app-bar app hide-on-scroll flat color="rgba(46, 48, 71, 0.8)" class="supra-nav__header" > 
-      <router-link to="/">
+      <!-- <router-link to="/">
         <v-img  src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
-      </router-link>
+      </router-link> -->
       <v-toolbar-title> 
         <router-link to="/"> 
           <div class="supra-header__title white--text"> 

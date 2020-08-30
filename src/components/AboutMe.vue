@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="supra-contact__data d-flex flex-column align-center justify-center my-10">
+    <v-container class="supra-about-me d-flex flex-column align-center justify-center mt-10">
       <div>
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
@@ -16,7 +16,7 @@
           <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz"></v-img>        
         </v-card>
     </v-container>
-    <v-container class="supra-contact__data d-flex flex-column align-center justify-center my-10">
+    <!-- <v-container class="supra-contact__data d-flex flex-column align-center justify-center my-10">
       <div>
         <v-subheader class="text-h2 my-10">Doświadczenie</v-subheader>
       </div>
@@ -51,7 +51,7 @@
         </v-card>
       </v-timeline-item>
     </v-timeline>
-    </v-container>    
+    </v-container>     -->
   </div>
 </template>
 <script>
