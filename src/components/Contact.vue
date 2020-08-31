@@ -4,7 +4,10 @@
       <v-form
         ref="form"
         v-model="valid"
-        lazy-validation                
+        lazy-validation
+        action="https://send.pageclip.co/IHvdAKugPHPwPwBD8DXmWeGFixLLB3Nu" 
+        class="pageclip-form" 
+        method="post"                
       >
         <v-text-field
           v-model="name"
@@ -60,7 +63,7 @@
 
         <v-btn
           :disabled="!valid"
-          class="mr-4"
+          class="mr-4 pageclip-form__submit"
           color="blue darken-2"
           outlined
           @click="validate"
@@ -104,12 +107,13 @@
     </v-container>
   </div>
 </template>
-<script> 
+<script > 
 export default {
   name: "Contact", 
    data: () => ({
       valid: true,
       name: '',
+      lastName: '',
       nameRules: [
         v => !!v || 'Uzupełnij pole',
       ],
@@ -131,9 +135,14 @@ export default {
       checkbox: false,
       lazy: false,
     }),
-
+    mounted() {
+      let pageclipScript = document.createElement('script')
+      pageclipScript.setAttribute('src', 'https://s.pageclip.co/v1/pageclip.js')
+      document.body.appendChild(pageclipScript)
+    },
     methods: {
       validate () {
+        this.$recaptchaInstance.hideBadge()
         this.$refs.form.validate()
       },
       reset () {
@@ -145,3 +154,5 @@ export default {
     },
   }
 </script>
+<style scoped rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+</style>

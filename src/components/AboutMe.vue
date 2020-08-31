@@ -5,7 +5,7 @@
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
         </div>
         <v-card class="d-flex flex-column align-center pa-10">
-          <v-card-text class="text-left">
+          <v-card-text class="text-left text-body-1">
             <p>
               Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. Służę przy tym wiedzą zgromadzoną w trakcie ponad 16-letniej kariery w branży, którą realizowałem na stanowiskach kierowniczych w takich instytucjach jak Nest Bank, Plus Bank, Raiffeisen Bank czy Polbank. Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
             </p>

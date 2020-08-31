@@ -20,9 +20,11 @@
             data-aos="flip-up"
             data-aos-delay="300"
             >
-            <v-card-title class="text-h2 align-self-start text-left justify-start font-weight-medium">
-              {{item.title}}
-            </v-card-title>
+            <v-card-text class="text-h2 align-self-start text-left justify-start font-weight-medium">
+            Porozmawiajmy <br>
+            o <span style="color:#3bbb9a;">Twoich</span> potrzebach 
+            finansowych
+            </v-card-text>
             <v-card-actions class="justify-start">
                 <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">{{item.button}}</v-btn>
             </v-card-actions>
@@ -44,7 +46,9 @@ export default {
         items: [
           {
             src: heroImage,
-            title: `Porozmawiajmy \n o Twoich potrzebach \n finansowych`,
+            title: `Porozmawiajmy 
+             o Twoich potrzebach 
+             finansowych`,
             button: 'Spotkajmy się'
           },
           // {

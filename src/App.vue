@@ -47,9 +47,6 @@ export default {
       dialog: false
     }
   },
-  mounted () {
-    console.log(this.$vuetify.breakpoint)
-  },
   computed: {
     breadcrumbs() {
       let pathArray = this.$route.path.split('/') 
@@ -66,7 +63,7 @@ export default {
       ) 
      return breadcrumbs
     }
-  }
+  },
 }
 </script>
 <style lang="scss">

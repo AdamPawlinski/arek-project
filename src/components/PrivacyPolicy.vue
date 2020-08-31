@@ -72,7 +72,7 @@
             Prawa Użytkownika
             Użytkownik na każdym etapie przetwarzania jego danych zapewniony ma szereg uprawnień pozwalających mu uzyskać dostęp do swoich danych, weryfikację prawidłowości przetwarzania danych, ich korektę, jak również ma prawo zgłoszenia sprzeciwu wobec ich przetwarzania, może żądać usunięcia danych, ograniczenia przetwarzania lub przeniesienia danych.
 
-            W przypadku chęci skorzystania przez Użytkownika z przysługujących mu praw jako podmiotu danych osobowych, może on się skontaktować z Administratorem za pomocą następujących danych kontaktowych: MASTER-PROFIT S.C. MARCIN PYKA, MARIUSZ PYKA, Kraszowicka 72, 58-100 Świdnica, pykaxp@op.pl.
+            W przypadku chęci skorzystania przez Użytkownika z przysługujących mu praw jako podmiotu danych osobowych, może on się skontaktować z Administratorem za pomocą następujących danych kontaktowych: Supra Finanse Arkadiusz Sztaba, a.sztaba@suprafinanse.pl.
 
             Prawo wniesienia skargi do organu nadzorczego
             Użytkownik, którego dane osobowe są przetwarzane przez Administratora ma prawo wnieść skargę do organu nadzoru właściwego w sprawach ochrony danych osobowych (Prezesa Urzędu Ochrony Danych Osobowych).
@@ -115,7 +115,7 @@
             W celu uaktualnienia informacji zawartych w niniejszej Polityce prywatności oraz jej zgodności z obowiązującymi przepisami prawa, niniejsza Polityka prywatności może ulec zmianie. W przypadku zmiany treści Polityki prywatności, zmieniona zostanie data jej aktualizacji wskazana na końcu jej tekstu. W celu zasięgnięcia informacji o sposobie ochrony danych osobowych, Administrator rekomenduje Użytkownikom regularne zapoznawanie się z postanowieniami Polityki Prywatności.
 
             Informacje kontaktowe
-            W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: MASTER-PROFIT S.C. MARCIN PYKA, MARIUSZ PYKA, Kraszowicka 72, 58-100 Świdnica, z wykorzystaniem następujących danych kontaktowych: pykaxp@op.pl.
+            W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: Supra Finanse Arkadiusz Sztaba, z wykorzystaniem następujących danych kontaktowych: a.sztaba@suprafinanse.pl.
           </p>
           <p>
             Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  

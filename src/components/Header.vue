@@ -15,8 +15,6 @@
       <v-btn
             dark
             exact-active-class="supra-header__button--active"
-            v-bind="attrs"
-            v-on="on"
             :text="true"
             to="/"
             class="supra-header__button"
@@ -25,9 +23,7 @@
           </v-btn>
           <v-btn
             dark
-            exact-active-class="supra-header__button--active"
-            v-bind="attrs"
-            v-on="on"
+            exact-active-class="supra-header__button--active"            
             :text="true"
             to="omnie"
             class="supra-header__button"
@@ -36,9 +32,7 @@
           </v-btn>
           <v-btn
             dark
-            exact-active-class="supra-header__button--active"
-            v-bind="attrs"
-            v-on="on"
+            exact-active-class="supra-header__button--active"            
             :text="true"
             to="oferta"
             class="supra-header__button"
@@ -50,8 +44,6 @@
           <v-btn
             dark
             exact-active-class="supra-header__button--active"
-            v-bind="attrs"
-            v-on="on"
             :text="true"
             to="kontakt"
             class="supra-header__button  mr-16"
