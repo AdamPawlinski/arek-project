@@ -11,6 +11,7 @@
       <Header />
       <v-alert
         class="supra-alert rounded-0"
+        width="100%"
         dismissible
         colored-border
         type="info"
