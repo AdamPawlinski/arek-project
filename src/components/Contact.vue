@@ -4,7 +4,8 @@
       <v-form
         ref="form"
         v-model="valid"
-        lazy-validation            
+        lazy-validation 
+        @submit.prevent="sendEmail"           
       >
         <v-text-field
           v-model="name"
@@ -69,7 +70,7 @@
           class="mr-4"
           color="blue darken-2"
           outlined
-          @click.prevent="validate"
+          @click.prevent="sendEmail"
         >
           Wyślij
         </v-btn>
@@ -111,7 +112,12 @@
   </div>
 </template>
 <script > 
+import Vue from 'vue';
 import emailjs from 'emailjs-com';
+import { VueReCaptcha } from 'vue-recaptcha-v3';
+
+Vue.use(VueReCaptcha, { siteKey: '6LfC9MUZAAAAAMAW2Tp6lfvOrhCh51a2CfRcWbFm' });
+
 export default {
   name: "Contact", 
    data: () => ({
@@ -140,26 +146,30 @@ export default {
       lazy: false,
     }),
     methods: {
-      validate () {
-        this.$recaptchaInstance
-        this.$refs.form.validate()
-        this.sendEmail()
-        console.log('validation')
-      },
+      // validate () {
+        
+      //   this.sendEmail()
+      //   console.log('validation')
+      // },
       reset () {
         this.$refs.form.reset()
       },
       resetValidation () {
         this.$refs.form.resetValidation()
-      },
+      },      
       sendEmail: (e) => {
-        console.log('sending')
-        emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
-        .then((result) => {
-            console.log('SUCCESS!', result.status, result.text);
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
+        console.log(e.target)
+        this.$recaptcha('login').then((token) => {
+          this.$refs.form.validate() 
+          data["g-recaptcha-response"] = token; 
+          console.log(token)        
+          emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
+          .then((result) => {
+              console.log('SUCCESS!', result.status, result.text);
+          }, (error) => {
+              console.log('FAILED...', error);
+          });
+        })        
       }
     },
   }
