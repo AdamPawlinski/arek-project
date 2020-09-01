@@ -161,7 +161,7 @@ export default {
         console.log(e.target)
         this.$recaptcha('login').then((token) => {
           this.$refs.form.validate() 
-          data["g-recaptcha-response"] = token; 
+          // data["g-recaptcha-response"] = token; 
           console.log(token)        
           emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
           .then((result) => {
