@@ -141,9 +141,10 @@ export default {
     }),
     methods: {
       validate () {
-        this.$recaptchaInstance.hideBadge()
+        this.$recaptchaInstance
         this.$refs.form.validate()
         this.sendEmail()
+        console.log('validation')
       },
       reset () {
         this.$refs.form.reset()
@@ -152,6 +153,7 @@ export default {
         this.$refs.form.resetValidation()
       },
       sendEmail: (e) => {
+        console.log('sending')
         emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
