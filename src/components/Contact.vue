@@ -5,20 +5,20 @@
         ref="form"
         v-model="valid"
         lazy-validation
-        action="https://send.pageclip.co/IHvdAKugPHPwPwBD8DXmWeGFixLLB3Nu" 
-        class="pageclip-form" 
-        method="post"                
+        @submit.prevent="sendEmail"             
       >
         <v-text-field
           v-model="name"
           :rules="nameRules"
           label="Imię"
+          name="imie"
           required
         ></v-text-field>
         <v-text-field
           v-model="lastName"
           :rules="nameRules"
           label="Nazwisko"
+          name="nazwisko"
           required
         ></v-text-field>
 
@@ -26,6 +26,7 @@
           v-model="email"
           :rules="emailRules"
           label="E-mail"
+          name="email"
           required
         ></v-text-field>
 
@@ -34,6 +35,7 @@
           :items="items"
           :rules="[v => !!v || 'Wybierz właściwą opcję']"
           label="Osoba fizyczna / Firma"
+          name="organizacja"
           required
           class="mb-10"
         ></v-select>
@@ -42,7 +44,8 @@
           v-model="question"
           :counter="200"
           :rules="questionRules"
-          label="Pytanie"
+          label="Wiadomość"
+          name="wiadomosc"
           rows="1"
           auto-grow
           clearable
@@ -52,6 +55,7 @@
         <v-checkbox
           v-model="checkbox"
           :rules="[v => !!v || 'Zaakceptuj żeby wysłać.']"
+          name="zgoda"
           required
           class="mb-10"
         >
@@ -63,7 +67,7 @@
 
         <v-btn
           :disabled="!valid"
-          class="mr-4 pageclip-form__submit"
+          class="mr-4"
           color="blue darken-2"
           outlined
           @click="validate"
@@ -108,6 +112,7 @@
   </div>
 </template>
 <script > 
+import emailjs from 'emailjs-com';
 export default {
   name: "Contact", 
    data: () => ({
@@ -135,11 +140,6 @@ export default {
       checkbox: false,
       lazy: false,
     }),
-    mounted() {
-      let pageclipScript = document.createElement('script')
-      pageclipScript.setAttribute('src', 'https://s.pageclip.co/v1/pageclip.js')
-      document.body.appendChild(pageclipScript)
-    },
     methods: {
       validate () {
         this.$recaptchaInstance.hideBadge()
@@ -151,8 +151,14 @@ export default {
       resetValidation () {
         this.$refs.form.resetValidation()
       },
+      sendEmail: (e) => {
+        emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+      }
     },
   }
 </script>
-<style scoped rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-</style>
