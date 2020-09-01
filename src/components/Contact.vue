@@ -4,8 +4,7 @@
       <v-form
         ref="form"
         v-model="valid"
-        lazy-validation
-        @submit.prevent="sendEmail"             
+        lazy-validation            
       >
         <v-text-field
           v-model="name"
@@ -70,7 +69,7 @@
           class="mr-4"
           color="blue darken-2"
           outlined
-          @click="validate"
+          @click.prevent="validate"
         >
           Wyślij
         </v-btn>
@@ -144,6 +143,7 @@ export default {
       validate () {
         this.$recaptchaInstance.hideBadge()
         this.$refs.form.validate()
+        this.sendEmail()
       },
       reset () {
         this.$refs.form.reset()
