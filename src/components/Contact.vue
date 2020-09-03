@@ -70,6 +70,8 @@
           class="mr-4"
           color="blue darken-2"
           outlined
+          type="submit"
+          value="send"
         >
           Wyślij
         </v-btn>
