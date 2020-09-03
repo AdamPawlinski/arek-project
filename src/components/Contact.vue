@@ -70,7 +70,6 @@
           class="mr-4"
           color="blue darken-2"
           outlined
-          @click.prevent="sendEmail"
         >
           Wyślij
         </v-btn>
@@ -146,11 +145,6 @@ export default {
       lazy: false,
     }),
     methods: {
-      // validate () {
-        
-      //   this.sendEmail()
-      //   console.log('validation')
-      // },
       reset () {
         this.$refs.form.reset()
       },
@@ -161,7 +155,6 @@ export default {
         console.log(e.target)
         this.$recaptcha('login').then((token) => {
           this.$refs.form.validate() 
-          // data["g-recaptcha-response"] = token; 
           console.log(token)        
           emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
           .then((result) => {

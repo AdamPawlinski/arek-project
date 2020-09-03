@@ -47,7 +47,7 @@ Vue.use(VueRouter)
     }
   },
   {
-    path: '/*',
+    path: '*',
     component: Error,
     meta: {
       breadCrumb: '404 page'
@@ -64,6 +64,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   scrollBehavior: (to, from, savedPosition) => {
     let scrollTo = 0
 
