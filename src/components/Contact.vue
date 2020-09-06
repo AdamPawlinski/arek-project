@@ -1,6 +1,6 @@
 <template>
   <div class="supra-contact">
-    <v-container class="supra-contact__form d-flex justify-center align-center">
+    <v-container class="supra-contact__form d-flex my-10 px-16 justify-center align-center">
       <v-form
         ref="form"
         v-model="valid"

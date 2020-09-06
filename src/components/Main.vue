@@ -1,6 +1,6 @@
 <template>
   <div>        
-    <v-main class="supra-main pt-0" id="main">
+    <v-main class="supra-main py-0" id="main">
       <v-container fluid class="supra-main__hero fill-height" 
         data-aos="fade-up"
         data-aos-offset="200"

@@ -13,65 +13,67 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-            dark
-            exact-active-class="supra-header__button--active"
-            :text="true"
-            to="/"
-            class="supra-header__button"
+        v-for="(item, index) in items"
+        :key="index"
+        dark
+        exact-active-class="supra-header__button--active"
+        :text="true"
+        :to="item.to"
+        class="supra-header__button hidden-md-and-down"
+      >
+        {{ item.title }}
+      </v-btn>
+      <v-menu absolute rounded="0" attach=".supra-nav__header" class="supra-header__mobile-menu">
+         <!-- <v-app-bar-nav-icon class="d-lg-none d-xl-none" color="white"> -->
+          <template v-slot:activator="{ on, attrs }">
+            <v-app-bar-nav-icon class="hidden-lg-and-up">
+              <v-btn
+                icon
+                v-bind="attrs"
+                v-on="on"            
+              >
+                <v-icon color="white" >mdi-dots-vertical</v-icon>
+              </v-btn>
+            </v-app-bar-nav-icon> 
+          </template>
+        <!-- </v-app-bar-nav-icon>  -->
+        <v-expand-transition>
+        <v-list class="supra-header__mobile-menu-list">          
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
           >
-            Strona Główna
-          </v-btn>
-          <v-btn
-            dark
-            exact-active-class="supra-header__button--active"            
-            :text="true"
-            to="omnie"
-            class="supra-header__button"
-          >
-            O mnie
-          </v-btn>
-          <v-btn
-            dark
-            exact-active-class="supra-header__button--active"            
-            :text="true"
-            to="oferta"
-            class="supra-header__button"
-          >
-            Oferta
-          </v-btn>
-          
-          <!-- <HeaderMenuOffer /> -->
-          <v-btn
-            dark
-            exact-active-class="supra-header__button--active"
-            :text="true"
-            to="kontakt"
-            class="supra-header__button  mr-16"
-          >
-            Kontakt
-          </v-btn>
-            <v-btn
-              v-for="icon in icons"
-              :key="icon.social"
-              class="mx-4 white--text"
-              icon
-              :href="icon.href"
-              target="_blank"                  
-            >
-              <v-icon size="24px">{{ icon.social }}</v-icon>
-            </v-btn>
-      <v-app-bar-nav-icon class="d-lg-none .d-xl-none">
-      </v-app-bar-nav-icon>   
+            <v-list-item-content>
+              <v-btn                
+                exact-active-class="supra-header__button--active"
+                dark
+                :text="true"
+                :to="item.to"
+                class="supra-header__button  mr-16 hidden-lg-and-up"
+              >
+                {{ item.title }}
+              </v-btn>            
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        </v-expand-transition>
+      </v-menu>
+      <v-btn
+        v-for="icon in icons"
+        :key="icon.social"
+        class="mx-4 white--text hidden-md-and-down"
+        icon
+        :href="icon.href"
+        target="_blank"                  
+      >
+        <v-icon size="24px">{{ icon.social }}</v-icon>
+      </v-btn>        
   </v-app-bar> 
 </nav> 
 </template>
 <script>
-  // import HeaderMenuOffer from "./HeaderMenuOffer"
   export default {
     name: 'Header',
-    components: {
-      // HeaderMenuOffer
-    },
     props: {
       msg: String
     },
@@ -90,7 +92,26 @@
             social: 'mdi-twitter',
             href: 'https://twitter.com/SztabaArek'
           },
+        ],
+        items: [
+          {
+            title: "Strona Główna",
+            to: "/",
+          },
+          {
+            title: "O mnie",
+            to: "omnie",
+          },
+          {
+            title: "Oferta",
+            to: "oferta",
+          },
+          {
+            title: "Kontakt",
+            to: "kontakt",
+          }
         ]
+
       }
     }
   }

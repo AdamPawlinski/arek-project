@@ -17,7 +17,7 @@
           <v-list-item 
             v-for="offer in offers"
             :key="offer.title"   
-            class="d-flex justify-start"                     
+            class="d-flex justify-center"                     
           >
             <v-btn
               color="white"
@@ -32,7 +32,7 @@
       </v-col>
       <v-divider color="#3bbb9a" inset class="d-flex d-lg-none"> </v-divider>
       <v-col cols="12" lg="3" class="d-flex justify-center justify-lg-end">
-        <div class="d-flex flex-column align-start align-lg-start">
+        <div class="d-flex flex-column align-center align-lg-start">
           <v-btn
             v-for="link in links"
             :key="link.name"

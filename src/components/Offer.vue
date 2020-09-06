@@ -1,43 +1,43 @@
 <template>
   <div>
-    <v-container class="supra-offer d-flex flex-column align-center justify-center mt-10"  fluid>
-      <v-row>
+    <v-container class="supra-offer d-flex flex-column align-center mt-12">
+      <v-row class="mt-1">
         <v-img src="../assets/offer_background.png" width="100vw" max-height="200px" contain></v-img>
       </v-row>
-        <v-row>
-          <v-col class="d-flex flex-column align-center my-10 mx-auto" cols="12" md="8">
-            <v-subheader class="text-h2 font-weight-medium mt-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
-            <v-divider class="supra-main__divider my-16"></v-divider>  
-            <v-subheader class="text-h5 font-weight-regular my-5">
-              Współpracuję z kilkunastoma bankami, towarzystwami ubezpieczeniowymi  i leasingowymi  w Polsce mających w swojej ofercie Kredyty obrotowe, ratalne, inwestycyjne, leasing samochodów, maszyn i urządzeń, faktoring, dla firm, a także kredyty hipoteczne, gotówkowe i konsolidacyjne dla klientów indywidualnych, ubezpieczenia na życie, majątkowe, zdrowotne czy firmowe. 
-              Niezależnie od tego, czego potrzebujesz, pomogę Ci, aby Twoje plany stały się rzeczywistością.               
-            </v-subheader>               
-          </v-col>     
-        </v-row>  
-        <v-row >
-          <v-col class="mx-auto" cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.title"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            :data-aos-delay="i * 50"
-          >
-             <v-hover v-slot:default="{ hover }">
-              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
-                <div class="supra-main__bullet mt-4"></div>
-                <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
-                  <v-card-title>{{card.title}}</v-card-title>
-                  <v-card-text>
-                    <p class="text-left">
-                      {{card.text}} 
-                    </p>
-                  </v-card-text> 
-                  <!-- <v-card-actions class="supra-main__card-button mt-n8">
-                    <v-btn text :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
-                  </v-card-actions>  -->
-                </div>                
-              </v-card>
-             </v-hover>
-          </v-col>
-        </v-row>
+      <v-row class="d-flex flex-column align-center my-10">
+        <v-col class="d-flex flex-column align-center" cols="12" md="8">
+          <v-subheader class="text-h2 font-weight-medium my-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
+          <v-divider class="supra-main__divider my-10"></v-divider>  
+          <v-card flat class="text-h5 mx-16 mx-lg-0 font-weight-regular my-5">
+            Współpracuję z kilkunastoma bankami, towarzystwami ubezpieczeniowymi  i leasingowymi  w Polsce mających w swojej ofercie Kredyty obrotowe, ratalne, inwestycyjne, leasing samochodów, maszyn i urządzeń, faktoring, dla firm, a także kredyty hipoteczne, gotówkowe i konsolidacyjne dla klientów indywidualnych, ubezpieczenia na życie, majątkowe, zdrowotne czy firmowe. 
+            Niezależnie od tego, czego potrzebujesz, pomogę Ci, aby Twoje plany stały się rzeczywistością.               
+          </v-card>               
+        </v-col>     
+      </v-row>  
+      <v-row class="mt-16">
+        <v-col  cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.title"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          :data-aos-delay="i * 50"
+        >
+            <v-hover v-slot:default="{ hover }">
+            <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <div class="supra-main__bullet mt-4"></div>
+              <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
+                <v-card-title>{{card.title}}</v-card-title>
+                <v-card-text>
+                  <p class="text-left">
+                    {{card.text}} 
+                  </p>
+                </v-card-text> 
+                <!-- <v-card-actions class="supra-main__card-button mt-n8">
+                  <v-btn text :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
+                </v-card-actions>  -->
+              </div>                
+            </v-card>
+            </v-hover>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>

@@ -7,14 +7,29 @@
     border-radius: 0; 
     &::before {
       background-color: transparent; 
-    }   
-    &:hover {
-      border-bottom: 1px solid #3bbb9a;
-    } 
-    &--active {
-      border-bottom: 1px solid #3bbb9a;
-    }
+    }        
+     @media screen and (min-width: 1264px) {
+       &:hover {
+        border-bottom: 1px solid #3bbb9a;
+      }
+      &--active {
+        border-bottom: 1px solid #3bbb9a;
+      }
+    }    
   }
+  &__mobile-menu-list {
+    background-color: rgba(46, 48, 71, 0.8) !important;
+  } 
+}
+.v-menu__content {
+  top: 56px !important;
+  width: 100vw !important;
+  max-width: 100vw;
+  background-color: rgba(46, 48, 71, 0.8) !important;
+  box-shadow: none;
+}
+.supra-nav__header {
+  position: relative;
 }
 .supra-alert {
   position: absolute;
@@ -22,8 +37,7 @@
   z-index: 1;
 }
 .supra-main { 
-  &__hero,
-  &__text-content {
+  &__hero{
     height: 100vh;
   }
   &__tab {
@@ -103,11 +117,11 @@ a {
     }
   }
 }
-.supra-privacy-policy,
-.supra-about-me,
-.supra-contact,
-.supra-offer {
-  margin-bottom: 700px; 
+.supra-content{
+  margin-bottom: 1200px;
+  @media screen and (min-width: 1264px) {
+    margin-bottom: 700px;
+  } 
 }
 .v-carousel__controls {
   height: 15vh;
