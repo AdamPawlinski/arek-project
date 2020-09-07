@@ -1,16 +1,16 @@
 <template>
 <nav>  
   <v-app-bar app hide-on-scroll flat color="rgba(46, 48, 71, 0.8)" class="supra-nav__header" > 
-      <!-- <router-link to="/">
-        <v-img  src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain />
-      </router-link> -->
-      <v-toolbar-title> 
+      <router-link to="/">
+        <v-img  src="../assets/LOGO.png" alt="Supra Finanse logo" max-height="50px" max-width="150px" contain />
+      </router-link>
+      <!-- <v-toolbar-title> 
         <router-link to="/"> 
           <div class="supra-header__title white--text"> 
             Supra Finanse
           </div>
         </router-link>
-      </v-toolbar-title>
+      </v-toolbar-title> -->
       <v-spacer></v-spacer>
       <v-btn
         v-for="(item, index) in items"

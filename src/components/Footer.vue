@@ -6,8 +6,8 @@
       no-gutters
     >
       <v-col cols="12" lg="6" class="d-flex flex-column align-center align-lg-start">
-        <!-- <v-img  class="mb-10" src="../assets/LogoMakr.png" alt="Supra Finanse logo" max-height="50px" max-width="100px" contain /> -->
-        <p class="text-left ml-6">
+        <v-img  class="mb-10" src="../assets/LOGO.png" alt="Supra Finanse logo" max-height="50px" max-width="150px" contain />
+        <p class="text-left">
           Specjalizuję się w dostarczaniu <br>kompleksowych uslug finansowych <br>dla przedsiębiorstw <br>oraz klienta indywidualnego.
         </p>
       </v-col>
@@ -17,7 +17,7 @@
           <v-list-item 
             v-for="offer in offers"
             :key="offer.title"   
-            class="d-flex justify-center"                     
+            class="d-flex justify-center justify-lg-start"                     
           >
             <v-btn
               color="white"
