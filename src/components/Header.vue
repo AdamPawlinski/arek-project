@@ -1,6 +1,6 @@
 <template>
 <nav>  
-  <v-app-bar app hide-on-scroll flat color="rgba(46, 48, 71, 0.8)" class="supra-nav__header" > 
+  <v-app-bar app hide-on-scroll flat fluid color="rgba(46, 48, 71, 0.8)" class="supra-nav__header"> 
       <router-link to="/">
         <v-img  src="../assets/LOGO.png" alt="Supra Finanse logo" max-height="50px" max-width="150px" contain />
       </router-link>

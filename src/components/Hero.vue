@@ -1,6 +1,6 @@
 <template>
   <v-container fill-height fluid class="supra-hero__container">
-    <v-carousel height="100%" cycle continuous progress hide-delimiter-background>
+    <v-carousel height="100%" cycle continuous progress hide-delimiter-background :show-arrows="items.length > 1" :hide-delimiters="items.length === 1">
       <v-carousel-item 
         v-for="(item,i) in items"
         :key="i"
@@ -11,24 +11,24 @@
         <v-sheet 
           height="100%"
           class="d-flex transparent align-center"      
-        >
+        >        
           <v-card    
             class="transparent ml-16"        
             max-height="30vh"
-            max-width="50vw" 
+            max-width="100vw" 
             elevation="0"
             data-aos="flip-up"
             data-aos-delay="300"
             >
-            <v-card-text class="text-h2 align-self-start text-left justify-start font-weight-medium">
+            <v-card-text class="text-h2 align-self-start text-md-left justify-start font-weight-medium">
             Porozmawiajmy <br>
-            o <span style="color:#3bbb9a;">Twoich</span> potrzebach 
+            o <span style="color:#3bbb9a;">Twoich</span><br> potrzebach 
             finansowych
             </v-card-text>
-            <v-card-actions class="justify-start">
+            <v-card-actions class="justify-center justify-md-start">
                 <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">{{item.button}}</v-btn>
             </v-card-actions>
-          </v-card>      
+          </v-card>            
         </v-sheet>
       </v-carousel-item>
     </v-carousel >

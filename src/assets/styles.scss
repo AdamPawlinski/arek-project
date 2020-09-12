@@ -93,7 +93,7 @@ a {
   &__item .v-image__image.v-image__image--cover {
     box-shadow: inset 0 0 0 1000px rgba(46, 48, 71, 0.8); 
     background-position: 100% !important;   
-    background-size: contain;
+    background-size: cover;
     background-color: #ddddd6;
   }
   &__arrow {

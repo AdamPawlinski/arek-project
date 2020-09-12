@@ -34,7 +34,7 @@
         data-aos-offset="200"
         data-aos-delay="50"      
       >
-        <v-subheader class="supra-main__subheader text-h2 my-10 white--text font-weight-medium" height="15vh">
+        <v-subheader class="supra-main__subheader text-h2 my-16 my-md-10 white--text font-weight-medium" height="15vh">
           Chcesz wiedzieć więcej?
           Potrzebujesz pomocy?
         </v-subheader>

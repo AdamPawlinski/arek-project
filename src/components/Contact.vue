@@ -1,11 +1,13 @@
 <template>
   <div class="supra-contact">
-    <v-container class="supra-contact__form d-flex my-10 px-16 justify-center align-center">
+    <v-container class="supra-contact__form d-flex my-16 px-16 justify-center align-center">
+      <div v-if="formSubmitted">Dziekuję za kontakt <span class="imie">{{name}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe</div>
       <v-form
         ref="form"
         v-model="valid"
         lazy-validation 
-        @submit.prevent="sendEmail"           
+        @submit.prevent="sendEmail" 
+        v-else          
       >
         <v-text-field
           v-model="name"
@@ -145,6 +147,7 @@ export default {
       ],
       checkbox: false,
       lazy: false,
+      formsubmitted: false,
     }),
     methods: {
       reset () {
@@ -157,9 +160,11 @@ export default {
         console.log(e.target)
         this.$recaptcha('login').then((token) => {
           this.$refs.form.validate() 
-          console.log(token)        
+          console.log(token) 
+          emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
           emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
           .then((result) => {
+              this.formsubmitted = true
               console.log('SUCCESS!', result.status, result.text);
           }, (error) => {
               console.log('FAILED...', error);
