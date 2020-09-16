@@ -1,12 +1,12 @@
 <template>
   <div class="supra-contact">
-    <v-container class="supra-contact__form d-flex my-16 px-16 justify-center align-center">
+    <v-container class="supra-contact__form d-flex px-16 justify-center align-center">
       <!-- <div v-if="formSubmitted">Dziękuję za kontakt <span class="imie">{{name}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe</div> -->
       <v-form
         ref="form"
         v-model="valid"
         @submit.prevent="sendContactForm"    
-          action="contact"              
+        action="contact"                      
       >
         <v-text-field
           v-model="name"

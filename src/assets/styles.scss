@@ -87,6 +87,12 @@ a {
 .supra-contact__data {
   height: 80vh;  
 }
+.supra-contact__form {
+  margin: 12rem 0;
+  @media screen and (min-width: 600px) {
+    margin: 6rem 0;
+  }
+}
 .supra-contact__card {
   @media screen and (min-width: 960px) {
     width: 50vw;
