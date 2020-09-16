@@ -123,7 +123,7 @@ import emailjs from 'emailjs-com';
 import { VueReCaptcha } from 'vue-recaptcha-v3';
 
 Vue.use(VueReCaptcha, { 
-  siteKey: '6LfC9MUZAAAAAMAW2Tp6lfvOrhCh51a2CfRcWbFm', 
+  siteKey: process.env.RECAPTCHAUSERKEY, 
   loaderOptions: {
     autoHideBadge: true
   } 
