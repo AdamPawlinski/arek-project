@@ -1,13 +1,12 @@
 <template>
   <div class="supra-contact">
     <v-container class="supra-contact__form d-flex my-16 px-16 justify-center align-center">
-      <div v-if="formSubmitted">Dziekuję za kontakt <span class="imie">{{name}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe</div>
+      <!-- <div v-if="formSubmitted">Dziękuję za kontakt <span class="imie">{{name}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe</div> -->
       <v-form
         ref="form"
         v-model="valid"
-        lazy-validation 
-        @submit.prevent="sendEmail" 
-        v-else          
+        @submit.prevent="sendContactForm"    
+          action="contact"              
       >
         <v-text-field
           v-model="name"
@@ -68,7 +67,6 @@
         </v-checkbox>
 
         <v-btn
-          :disabled="!valid"
           class="mr-4"
           color="blue darken-2"
           outlined
@@ -86,6 +84,11 @@
         >
           Wyczyść formularz
         </v-btn>
+        <v-card-text>
+          This site is protected by reCAPTCHA and the Google
+          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+          <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </v-card-text>
       </v-form>
     </v-container>
     <v-container class="supra-contact__data d-flex justify-center my-10">
@@ -119,12 +122,18 @@ import Vue from 'vue';
 import emailjs from 'emailjs-com';
 import { VueReCaptcha } from 'vue-recaptcha-v3';
 
-Vue.use(VueReCaptcha, { siteKey: '6LfC9MUZAAAAAMAW2Tp6lfvOrhCh51a2CfRcWbFm' });
+Vue.use(VueReCaptcha, { 
+  siteKey: '6LfC9MUZAAAAAAPUr_E925pCLskpxsX9x07Y93ib', 
+  loaderOptions: {
+    autoHideBadge: true
+  } 
+});
 
 export default {
   name: "Contact", 
-   data: () => ({
-      valid: true,
+   data() {
+     return {
+      valid: false,
       name: '',
       lastName: '',
       nameRules: [
@@ -148,28 +157,38 @@ export default {
       checkbox: false,
       lazy: false,
       formsubmitted: false,
-    }),
+     }
+    },
     methods: {
       reset () {
         this.$refs.form.reset()
       },
       resetValidation () {
         this.$refs.form.resetValidation()
+      },
+      validate () {
+        this.$refs.form.validate()
       },      
-      sendEmail: (e) => {
-        console.log(e.target)
-        this.$recaptcha('login').then((token) => {
-          this.$refs.form.validate() 
-          console.log(token) 
+      sendContactForm(e) {
+        
+        if (this.validate) {      
+          console.log(this.$refs.form.validate())     
           emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
-          emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
-          .then((result) => {
-              this.formsubmitted = true
-              console.log('SUCCESS!', result.status, result.text);
-          }, (error) => {
-              console.log('FAILED...', error);
-          });
-        })        
+          this.$recaptcha('login').then((token) => {
+            console.log(token)
+            if (token.success && token.score >= 0.5 && token.action === 'login') {
+              emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
+              .then((result) => {
+                  // this.formsubmitted = true
+                  console.log('SUCCESS!', result.status, result.text);
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
+            }
+          }, error => {
+            console.log('reCaptcha error', error)
+          })
+        }    
       }
     },
   }

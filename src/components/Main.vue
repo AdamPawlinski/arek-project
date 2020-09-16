@@ -54,7 +54,7 @@
               <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
                 <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
-                  <v-card-title>{{card.title}}</v-card-title>
+                  <v-card-title class="supra-main__card-title">{{card.title}}</v-card-title>
                   <v-card-text>
                     <p class="text-left">
                       {{card.text}} 
@@ -123,10 +123,8 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+/* h3 {
   margin: 40px 0 0;
 }
 ul {
@@ -139,5 +137,5 @@ li {
 }
 a {
   color: #42b983;
-}
+} */
 </style>
