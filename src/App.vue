@@ -29,7 +29,17 @@
       >         
           <Main />
       </router-view>
-      <Footer />
+      <Footer />      
+      <div v-show="visible">
+        <v-btn
+          href="#main"
+          class="supra-hero__arrow supra-hero__arrow--up py-6 white--text"
+          color="#3bbb9a" 
+          @click="$vuetify.goTo(target)"       
+        >
+          <v-icon large>mdi-arrow-up </v-icon>
+        </v-btn>
+      </div>      
     </v-app>
   </div>
 </template>
@@ -45,32 +55,45 @@ export default {
   },
   data() {
     return {
-      dialog: false
+      dialog: false,
+      visible: false,
+      target: "#app",
     }
   },
-  computed: {
-    breadcrumbs() {
-      let pathArray = this.$route.path.split('/') 
-       pathArray.shift()
-      console.log(pathArray)
-      let breadcrumbs = pathArray.map(
-        (path, index, breadcrumbArray)  => {
-          console.log(this.$route.matched[index], path)
-          breadcrumbArray.push(
-            this.$route.matched[index].meta.breadCrumb || path,
-          );
-          return breadcrumbArray
-        }
-      ) 
-     return breadcrumbs
+  // computed: {
+  //   breadcrumbs() {
+  //     let pathArray = this.$route.path.split('/') 
+  //      pathArray.shift()
+  //     console.log(pathArray)
+  //     let breadcrumbs = pathArray.map(
+  //       (path, index, breadcrumbArray)  => {
+  //         console.log(this.$route.matched[index], path)
+  //         breadcrumbArray.push(
+  //           this.$route.matched[index].meta.breadCrumb || path,
+  //         );
+  //         return breadcrumbArray
+  //       }
+  //     ) 
+  //    return breadcrumbs
+  //   }
+  // },
+  methods: {
+    scrollListener() {
+      this.visible = window.scrollY > 150
     }
   },
+  mounted() {
+    window.addEventListener('scroll', this.scrollListener)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scrollListener)
+  }
 }
 </script>
 <style lang="scss">
 @import "./assets/styles.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

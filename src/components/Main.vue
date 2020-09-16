@@ -29,13 +29,13 @@
           </v-col>          
         </v-row>
       </v-container>
-      <v-container width="100vw" class="supra-main__call-to-action d-flex flex-column align-center justify-center my-10" fluid
+      <v-container width="100vw" class="supra-main__call-to-action d-flex flex-column align-center justify-center my-10 py-16" fluid
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="50"      
       >
-        <v-subheader class="supra-main__subheader text-h2 my-16 my-md-10 white--text font-weight-medium" height="15vh">
-          Chcesz wiedzieć więcej?
+        <v-subheader class="supra-main__subheader text-h3 text-md-h2 my-16 my-md-10 white--text font-weight-medium" height="15vh">
+          Chcesz wiedzieć więcej? <br>
           Potrzebujesz pomocy?
         </v-subheader>
         <v-btn class="black--text text-h6 text-none rounded-0 pa-7" large elevation="0" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
@@ -51,10 +51,10 @@
             :data-aos-delay="i * 50"
           >
              <v-hover v-slot:default="{ hover }">
-              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="30vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
                 <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
-                  <v-card-title class="supra-main__card-title">{{card.title}}</v-card-title>
+                  <v-card-title class="supra-main__card-title text-left">{{card.title}}</v-card-title>
                   <v-card-text>
                     <p class="text-left">
                       {{card.text}} 
@@ -113,7 +113,7 @@ export default {
         },
         {
           title: "Faktoring",
-          text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu (faktora) nieprzeterminowanych wierzytelności przedsiębiorstw (faktorantów)."
+          text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu nieprzeterminowanych wierzytelności przedsiębiorstw."
         },
       ]
     }

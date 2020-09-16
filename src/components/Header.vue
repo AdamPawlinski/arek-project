@@ -1,6 +1,6 @@
 <template>
 <nav>  
-  <v-app-bar app hide-on-scroll flat fluid color="rgba(46, 48, 71, 0.8)" class="supra-nav__header"> 
+  <v-app-bar app hide-on-scroll flat fluid color="rgba(46, 48, 71, 0.8)" class="supra-header"> 
       <router-link to="/">
         <v-img  src="../assets/LOGO.png" alt="Supra Finanse logo" max-height="50px" max-width="150px" contain />
       </router-link>
@@ -23,7 +23,7 @@
       >
         {{ item.title }}
       </v-btn>
-      <v-menu absolute rounded="0" attach=".supra-nav__header" class="supra-header__mobile-menu">
+      <v-menu absolute rounded="0" attach=".supra-header" class="supra-header__mobile-menu">
          <!-- <v-app-bar-nav-icon class="d-lg-none d-xl-none" color="white"> -->
           <template v-slot:activator="{ on, attrs }">
             <v-app-bar-nav-icon class="hidden-lg-and-up">

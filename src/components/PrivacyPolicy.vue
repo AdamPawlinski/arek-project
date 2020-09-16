@@ -2,7 +2,7 @@
   <div>
     <v-container class="supra-privacy-policy mt-16">
       <div>
-          <v-subheader class="text-h2 d-flex justify-center my-10">Polityka Prywatności</v-subheader>
+          <v-subheader class="text-h2 d-flex justify-center py-16">Polityka Prywatności</v-subheader>
       </div>
       <v-card class="d-flex flex-column align-center pa-10" height="100%">
         <v-card-text class="text-left">
@@ -116,9 +116,6 @@
 
             Informacje kontaktowe
             W celu uzyskania jakichkolwiek informacji dotyczących niniejszej Polityki Prywatności, Użytkownik może skontaktować się z Administratorem danych osobowych: Supra Finanse Arkadiusz Sztaba, z wykorzystaniem następujących danych kontaktowych: a.sztaba@suprafinanse.pl.
-          </p>
-          <p>
-            Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  
           </p>
         </v-card-text>      
       </v-card>

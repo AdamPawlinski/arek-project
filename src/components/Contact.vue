@@ -35,10 +35,11 @@
           v-model="select"
           :items="items"
           :rules="[v => !!v || 'Wybierz właściwą opcję']"
+          attach
           label="Osoba fizyczna / Firma"
           name="organizacja"
           required
-          class="mb-10"
+          class="supra-contact__form--select mb-10"
         ></v-select>
 
         <v-textarea
@@ -61,7 +62,7 @@
           class="mb-10"
         >
           <template #label>
-            <span>Zapoznałem się z <a href="#/privacy_policy" @click.stop>POLITYKĄ PRYWATNOŚCI</a> i ją akceptuję oraz wyrażam zgodę na przetwarzanie danych osobowych. zgodnie z art. 13 ust. 1 i ust. 2 oraz art. 14 ust. 1 i ust. 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/56/ WE (dalej jako: „RODO”) stosowanego od 25 maja 2018 r.
+            <span>Zapoznałem się z <a href="/polityka-prywatnosci" @click.stop>POLITYKĄ PRYWATNOŚCI</a> i ją akceptuję oraz wyrażam zgodę na przetwarzanie danych osobowych. zgodnie z art. 13 ust. 1 i ust. 2 oraz art. 14 ust. 1 i ust. 2 rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/56/ WE (dalej jako: „RODO”) stosowanego od 25 maja 2018 r.
             </span>
           </template>
         </v-checkbox>
@@ -91,10 +92,10 @@
         </v-card-text>
       </v-form>
     </v-container>
-    <v-container class="supra-contact__data d-flex justify-center my-10">
+    <v-container class="supra-contact__data d-flex justify-center my-3 my-md-10">
       <v-card
-        class="d-flex flex-column justify-space-around align-center pa-12"
-        width="50vw"
+        class="supra-contact__card d-flex flex-column justify-space-around align-center pa-3 pa-md-12"
+        width="75vw"
       >
         <v-card-subtitle class="pb-4 subtitle-1">Supra Finanse</v-card-subtitle>
 

@@ -13,7 +13,7 @@
           class="d-flex transparent align-center"      
         >        
           <v-card    
-            class="transparent ml-16"        
+            class="transparent ml-sm-16"        
             max-height="30vh"
             max-width="100vw" 
             elevation="0"
@@ -64,10 +64,5 @@ export default {
         ],
       }
     }, 
-    mounted: {
-      reveal() {
-
-      }
-    }
 }
 </script>

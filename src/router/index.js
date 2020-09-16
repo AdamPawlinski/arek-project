@@ -40,7 +40,7 @@ Vue.use(VueRouter)
     }
   },
   {
-    path: '/privacy_policy',
+    path: '/polityka-prywatnosci',
     component: PrivacyPolicy,
     meta: {
       breadCrumb: 'Polityka prywatności'

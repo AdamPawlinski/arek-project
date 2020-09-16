@@ -8,7 +8,7 @@
         <v-col class="d-flex flex-column align-center" cols="12" md="8">
           <v-subheader class="text-h2 font-weight-medium my-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
           <v-divider class="supra-main__divider my-10"></v-divider>  
-          <v-card flat class="text-h5 mx-16 mx-lg-0 font-weight-regular my-5">
+          <v-card flat class="text-h5 mx-16 mx-lg-0 font-weight-regular my-5 text-left">
             Współpracuję z kilkunastoma bankami, towarzystwami ubezpieczeniowymi  i leasingowymi  w Polsce mających w swojej ofercie Kredyty obrotowe, ratalne, inwestycyjne, leasing samochodów, maszyn i urządzeń, faktoring, dla firm, a także kredyty hipoteczne, gotówkowe i konsolidacyjne dla klientów indywidualnych, ubezpieczenia na życie, majątkowe, zdrowotne czy firmowe. 
             Niezależnie od tego, czego potrzebujesz, pomogę Ci, aby Twoje plany stały się rzeczywistością.               
           </v-card>               
@@ -24,8 +24,8 @@
             <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="35vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
               <div class="supra-main__bullet mt-4"></div>
               <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
-                <v-card-title>{{card.title}}</v-card-title>
-                <v-card-text>
+                <v-card-title class="supra-main__card-title text-left">{{card.title}}</v-card-title>
+                <v-card-text >
                   <p class="text-left">
                     {{card.text}} 
                   </p>
@@ -77,7 +77,7 @@ export default {
         },
         {
           title: "Faktoring",
-          text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu (faktora) nieprzeterminowanych wierzytelności przedsiębiorstw (faktorantów)."
+          text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu nieprzeterminowanych wierzytelności przedsiębiorstw."
         },
       ]
     }

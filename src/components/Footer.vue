@@ -74,17 +74,7 @@
         <span> Projekt graficzny marcinsuliga.eu </span>
       </v-col> -->
     </v-row>
-    </v-container>
-      <div class="">
-       <v-btn
-        href="#main"
-        class="supra-hero__arrow supra-hero__arrow--up py-6 white--text"
-        color="#3bbb9a" 
-        @click="$vuetify.goTo(target, options)"       
-      >
-        <v-icon large>mdi-arrow-up </v-icon>
-      </v-btn>
-      </div>      
+    </v-container>            
  </v-footer>
 </template>
 <script>
@@ -161,7 +151,6 @@ export default {
         //   to: '/'
         // }
       ],
-      target: ".supra-nav__header",
       options: {
         duration: 300,
         offset: 0,
