@@ -123,7 +123,7 @@ import emailjs from 'emailjs-com';
 import { VueReCaptcha } from 'vue-recaptcha-v3';
 
 Vue.use(VueReCaptcha, { 
-  siteKey: '6LfC9MUZAAAAAAPUr_E925pCLskpxsX9x07Y93ib', 
+  siteKey: '6LfC9MUZAAAAAMAW2Tp6lfvOrhCh51a2CfRcWbFm', 
   loaderOptions: {
     autoHideBadge: true
   } 
@@ -170,13 +170,14 @@ export default {
         this.$refs.form.validate()
       },      
       sendContactForm(e) {
-        
-        if (this.validate) {      
-          console.log(this.$refs.form.validate())     
+        console.log(this.$refs.form.validate()) 
+        if (this.$refs.form.validate()) {      
+              
           emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
-          this.$recaptcha('login').then((token) => {
-            console.log(token)
-            if (token.success && token.score >= 0.5 && token.action === 'login') {
+          this.$recaptcha('login').then((token) => {            
+            // const response = JSON.parse(token);
+            // console.log(response.success)
+            if (token) {
               emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
               .then((result) => {
                   // this.formsubmitted = true
