@@ -2,5 +2,7 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  publicPath: '/arek-project'
+  publicPath: process.env.NODE_ENV === 'production' 
+  ? '/arek-project' 
+  : "/"
 }
