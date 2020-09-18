@@ -122,9 +122,10 @@
 import Vue from 'vue';
 import emailjs from 'emailjs-com';
 import { VueReCaptcha } from 'vue-recaptcha-v3';
+require('dotenv').config()
 
 Vue.use(VueReCaptcha, { 
-  siteKey: process.env.RECAPTCHAUSERKEY, 
+  siteKey: process.env.VUE_APP_RECAPTCHA_USER_KEY, 
   loaderOptions: {
     autoHideBadge: true
   } 
@@ -173,7 +174,7 @@ export default {
       sendContactForm(e) {
         console.log(this.$refs.form.validate()) 
         if (this.$refs.form.validate()) {      
-              
+          console.log(process.env.VUE_APP_RECAPTCHA_USER_KEY)    
           emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
           this.$recaptcha('login').then((token) => {            
             // const response = JSON.parse(token);

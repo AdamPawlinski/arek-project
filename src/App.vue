@@ -47,6 +47,8 @@
 import Header from "./components/Header"
 import Main from "./components/Main"
 import Footer from "./components/Footer"
+require('dotenv').config()
+
 export default {
   components: {
     Header,
