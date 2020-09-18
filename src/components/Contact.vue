@@ -172,9 +172,9 @@ export default {
         this.$refs.form.validate()
       },      
       sendContactForm(e) {
-        console.log(this.$refs.form.validate()) 
+        // console.log(this.$refs.form.validate()) 
         if (this.$refs.form.validate()) {      
-          console.log(process.env.VUE_APP_RECAPTCHA_USER_KEY)    
+          // console.log(process.env.VUE_APP_RECAPTCHA_USER_KEY)    
           emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
           this.$recaptcha('login').then((token) => {            
             // const response = JSON.parse(token);

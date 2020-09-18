@@ -66,7 +66,7 @@ export default {
   //   breadcrumbs() {
   //     let pathArray = this.$route.path.split('/') 
   //      pathArray.shift()
-  //     console.log(pathArray)
+  //     (pathArray)
   //     let breadcrumbs = pathArray.map(
   //       (path, index, breadcrumbArray)  => {
   //         console.log(this.$route.matched[index], path)
