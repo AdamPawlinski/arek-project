@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-container class="supra-offer d-flex flex-column align-center mt-12">
-      <v-row class="mt-1">
-        <v-img src="../assets/offer_background.png" width="100vw" max-height="200px" contain></v-img>
+    <v-container class="supra-offer d-flex flex-column align-center">
+      <v-row class="supra-offer__image">
+        <v-img src="../assets/offer_background_1.png" width="100vw" max-height="200px" ></v-img>
       </v-row>
       <v-row class="d-flex flex-column align-center my-10">
         <v-col class="d-flex flex-column align-center" cols="12" md="8">

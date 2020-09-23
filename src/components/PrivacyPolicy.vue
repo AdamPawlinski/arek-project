@@ -7,11 +7,11 @@
       <v-card class="d-flex flex-column align-center pa-10" height="100%">
         <v-card-text class="text-left">
           <p>
-            Celem Administratora jest również należyte informowanie Użytkowników o prawach i obowiązkach związanych z przetwarzaniem danych osobowych, szczególnie wobec treści przepisów o ochronie danych osobowych określonych w rozporządzeniu Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27.04.2016r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (dalej jako „RODO”). Dlatego też, dbając o ochronę prywatności Użytkowników Serwisu, w niniejszym dokumencie Administrator informuje o podstawach prawnych przetwarzania danych osobowych przekazanych przez Użytkowników w związku z korzystaniem przez nich z Serwisu www.master-profit.pl (dalej jako „Serwis”), sposobach zbierania, przetwarzania i ochrony danych osobowych, a także o prawach Użytkowników.
+            Celem Administratora jest również należyte informowanie Użytkowników o prawach i obowiązkach związanych z przetwarzaniem danych osobowych, szczególnie wobec treści przepisów o ochronie danych osobowych określonych w rozporządzeniu Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27.04.2016r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (dalej jako „RODO”). Dlatego też, dbając o ochronę prywatności Użytkowników Serwisu, w niniejszym dokumencie Administrator informuje o podstawach prawnych przetwarzania danych osobowych przekazanych przez Użytkowników w związku z korzystaniem przez nich z Serwisu www.suprafinanse.pl (dalej jako „Serwis”), sposobach zbierania, przetwarzania i ochrony danych osobowych, a także o prawach Użytkowników.
 
             Użytkownikiem jest każda osoba fizyczna, której dane dotyczą, korzystająca z serwisu internetowego www.suprafinanse.pl lub usług elektronicznych dostępnych za pośrednictwem Serwisu.
 
-            Administratorem danych osobowych udostępnionych przez Użytkownika w Serwisie www.suprafinanse.pl jest Supra Finanse Arkadiusz Sztaba (dalej jako „Administrator”).
+            Administratorem danych osobowych udostępnionych przez Użytkownika w Serwisie www.suprafinanse.pl jest Supra Finanse Arkadiusz Sztaba, a.sztaba@suprafinanse.pl (dalej jako „Administrator”).
           </p>
           <p>
             ZGODA UŻYTKOWNIKA

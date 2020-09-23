@@ -7,7 +7,7 @@
     >
       <v-col cols="12" lg="6" class="d-flex flex-column align-center align-lg-start">
         <v-img  class="mb-10" src="../assets/LOGO.png" alt="Supra Finanse logo" max-height="50px" max-width="150px" contain />
-        <p class="text-left">
+        <p class="text-center text-lg-left">
           Specjalizuję się w dostarczaniu <br>kompleksowych uslug finansowych <br>dla przedsiębiorstw <br>oraz klienta indywidualnego.
         </p>
       </v-col>
@@ -131,6 +131,10 @@ export default {
         {
           name: "Kontakt",
           to: "kontakt"
+        },
+        {
+          name: "Polityka Prywatności",
+          to: "polityka-prywatnosci"
         },
       ],
       icons: [

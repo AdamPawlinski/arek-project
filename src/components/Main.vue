@@ -15,7 +15,7 @@
       >
         <v-row>
           <v-col class="d-flex flex-column align-center">
-            <v-subheader class="text-h2 font-weight-medium mt-10">Supra Finanse</v-subheader> 
+            <v-subheader class="text-h2 font-weight-medium my-10 my-md-5">Supra Finanse</v-subheader> 
             <v-subheader class="text-h4 font-weight-regular my-5">doradztwo finansowe</v-subheader> 
             <v-divider class="supra-main__divider mt-16"></v-divider>    
           </v-col>     
@@ -51,19 +51,19 @@
             :data-aos-delay="i * 50"
           >
              <v-hover v-slot:default="{ hover }">
-              <v-card class="supra-main__card pa-5 mx-10 mx-md-0" hover min-height="30vh" :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+              <v-card height="100%" class="supra-main__card pa-5 mx-10 mx-md-0" hover :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
                 <div class="supra-main__bullet mt-4"></div>
-                <div class="supra-main__content d-flex flex-column justify-space-between ml-6 my-n10">
-                  <v-card-title class="supra-main__card-title text-left">{{card.title}}</v-card-title>
-                  <v-card-text>
-                    <p class="text-left">
-                      {{card.text}} 
-                    </p>
-                  </v-card-text> 
-                  <v-card-actions class="supra-main__card-button mt-n8">
-                    <v-btn text to="oferta" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
-                  </v-card-actions> 
-                </div>                
+                  <div class="supra-main__card-content d-flex flex-column justify-space-between ml-6 mt-n11">
+                    <v-card-title class="supra-main__card-title text-left">{{card.title}}</v-card-title>
+                    <v-card-text>
+                      <p class="text-left">
+                        {{card.text}} 
+                      </p>
+                    </v-card-text> 
+                    <v-card-actions class="supra-main__card-button">
+                      <v-btn text to="oferta" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
+                    </v-card-actions> 
+                  </div>              
               </v-card>
              </v-hover>
           </v-col>
@@ -93,7 +93,7 @@ export default {
         },
         {
           title: "Kredyt konsolidacyjny",
-          text: "Kredyt konsolidacyjny to kredyt dzięki któremu łączysz kilka kredytów w jeden."
+          text: "Kredyt konsolidacyjny to kredyt dzięki któremu łączysz kilka kredytów w jeden z niższą miesięczną ratą niż suma dotychczasowych rat."
         },
         {
           title: "Kredyt na spłatę ZUS i US.",
@@ -120,7 +120,7 @@ export default {
   },
   props: {
     msg: String
-  }
+  },  
 }
 </script>
 <style scoped>

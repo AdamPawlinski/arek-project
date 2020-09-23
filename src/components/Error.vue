@@ -1,5 +1,5 @@
 <template>
-  <v-container fill-height class="d-flex flex-column align-center justify-center my-10">
+  <v-container fill-height class="supra-error d-flex flex-column align-center justify-center my-10">
     <v-card 
       class="d-flex flex-column justify-center align-center pa-12"
     >

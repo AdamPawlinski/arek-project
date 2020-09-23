@@ -32,7 +32,7 @@
       <Footer />      
       <div v-show="visible">
         <v-btn
-          href="#main"
+          href="#app"
           class="supra-hero__arrow supra-hero__arrow--up py-6 white--text"
           color="#3bbb9a" 
           @click="$vuetify.goTo(target)"       
@@ -81,7 +81,7 @@ export default {
   // },
   methods: {
     scrollListener() {
-      this.visible = window.scrollY > 150
+      this.visible = window.scrollY > 500
     }
   },
   mounted() {
@@ -102,16 +102,16 @@ export default {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+// #nav {
+//   padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+//   a {
+//     font-weight: bold;
+//     color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+//     &.router-link-exact-active {
+//       color: #42b983;
+//     }
+//   }
+// }
 </style>

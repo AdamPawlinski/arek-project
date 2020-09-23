@@ -1,6 +1,6 @@
 <template>
   <v-container fill-height fluid class="supra-hero__container">
-    <v-carousel height="100%" cycle continuous progress hide-delimiter-background :show-arrows="items.length > 1" :hide-delimiters="items.length === 1">
+    <v-carousel height="100vh" cycle continuous progress hide-delimiter-background :show-arrows="items.length > 1" :hide-delimiters="items.length === 1">
       <v-carousel-item 
         v-for="(item,i) in items"
         :key="i"
@@ -32,7 +32,7 @@
         </v-sheet>
       </v-carousel-item>
     </v-carousel >
-     <div class="supra-hero__arrow">
+     <div v-show="arrowDownVisible" class="supra-hero__arrow">
       <v-icon large class="white--text">mdi-arrow-down </v-icon>
     </div>
   </v-container>
@@ -62,7 +62,20 @@ export default {
           //   button: 'Przekonaj się'
           // },
         ],
+        arrowDownVisible: false,
       }
+    },
+    methods: {
+      scrollDownListener() {
+        this.arrowDownVisible = window.scrollY < 200
+      }
+    },
+    mounted() {
+      this.submitted = false;
+      window.addEventListener('scroll', this.scrollDownListener)
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.scrollDownListener)
     }, 
 }
 </script>

@@ -1,7 +1,9 @@
 <template>
   <div class="supra-contact">
-    <v-container class="supra-contact__form d-flex px-16 justify-center align-center">
-      <!-- <div v-if="formSubmitted">Dziękuję za kontakt <span class="imie">{{name}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe</div> -->
+    <v-container class="supra-contact__form d-flex flex-column px-16 justify-center align-center">
+      <v-alert class="white--text text-h6" type="success" color="#3bbb9a" :value="submitted" transition="scale-transition">
+          Dziękuję za kontakt <span class="imie">{{nameSubmitted}}</span>. Otrzymałem od Ciebie wiadomość i odpowiem na nią najszybciej jak to możliwe.
+      </v-alert>
       <v-form
         ref="form"
         v-model="valid"
@@ -91,7 +93,10 @@
           <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </v-card-text>
       </v-form>
-    </v-container>
+      <div v-show="arrowDownVisible" class="supra-contact__arrow">
+        <v-icon large class="white--text">mdi-arrow-down </v-icon>
+      </div>
+    </v-container>    
     <v-container class="supra-contact__data d-flex justify-center my-3 my-md-10">
       <v-card
         class="supra-contact__card d-flex flex-column justify-space-around align-center pa-3 pa-md-12"
@@ -133,66 +138,92 @@ Vue.use(VueReCaptcha, {
 
 export default {
   name: "Contact", 
-   data() {
-     return {
-      valid: false,
-      name: '',
-      lastName: '',
-      nameRules: [
-        v => !!v || 'Uzupełnij pole',
-      ],
-      email: '',
-      emailRules: [
-        v => !!v || 'Uzupełnij email',
-        v => /.+@.+\..+/.test(v) || 'Email musi być prawidłowy',
-      ],
-      select: null,
-      items: [
-        'Osoba fizyczna',
-        'Firma'
-      ],
-      question: null,
-      questionRules: [
-        v => !!v || 'Uzupełnij pole',
-        v => (v && v.length <= 200) || 'Pytanie nie może być dłuższe niż 200 znaków',
-      ],
-      checkbox: false,
-      lazy: false,
-      formsubmitted: false,
-     }
+  data() {
+    return {
+    valid: false,
+    name: '',      
+    lastName: '',
+    nameRules: [
+      v => !!v || 'Uzupełnij pole',
+    ],
+    email: '',
+    emailRules: [
+      v => !!v || 'Uzupełnij email',
+      v => /.+@.+\..+/.test(v) || 'Email musi być prawidłowy',
+    ],
+    select: null,
+    items: [
+      'Osoba fizyczna',
+      'Firma'
+    ],
+    question: null,
+    questionRules: [
+      v => !!v || 'Uzupełnij pole',
+      v => (v && v.length <= 200) || 'Pytanie nie może być dłuższe niż 200 znaków',
+    ],
+    checkbox: false,
+    submitted: false,
+    nameSubmitted: '',  
+    arrowDownVisible: false,   
+    }     
+  },
+  methods: {
+    reset () {
+      this.$refs.form.reset()
     },
-    methods: {
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
-      },
-      validate () {
-        this.$refs.form.validate()
-      },      
-      sendContactForm(e) {
-        // console.log(this.$refs.form.validate()) 
-        if (this.$refs.form.validate()) {      
-          // console.log(process.env.VUE_APP_RECAPTCHA_USER_KEY)    
-          emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
-          this.$recaptcha('login').then((token) => {            
-            // const response = JSON.parse(token);
-            // console.log(response.success)
-            if (token) {
-              emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
-              .then((result) => {
-                  // this.formsubmitted = true
-                  console.log('SUCCESS!', result.status, result.text);
-              }, (error) => {
-                  console.log('FAILED...', error);
-              });
-            }
-          }, error => {
-            console.log('reCaptcha error', error)
-          })
-        }    
-      }
+    resetValidation () {
+      this.$refs.form.resetValidation()
     },
-  }
+    validate () {
+      this.$refs.form.validate()
+    },      
+    sendContactForm(e) {
+      // console.log(this.$refs.form.validate()) 
+      if (this.$refs.form.validate()) {      
+        // console.log(process.env.VUE_APP_RECAPTCHA_USER_KEY)    
+        emailjs.init('user_IOvcrHPIPVyLJM1g8I3wJ')  
+        this.$recaptcha('login').then((token) => {            
+          // const response = JSON.parse(token);
+          // console.log(response.success)
+          if (token) {
+            emailjs.sendForm('suprafinanse.pl', 'template_0ixka9q', e.target, 'user_IOvcrHPIPVyLJM1g8I3wJ')
+            .then((result) => {
+                // this.submitHandler;
+                this.submitted = true;
+                console.log('SUCCESS!', result.status, result.text);
+                this.$refs.form.reset()
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+          }
+        }, error => {
+          console.log('reCaptcha error', error)
+        })
+      }    
+    },
+    scrollDownListener() {
+      this.arrowDownVisible = window.scrollY < 150
+    }    
+  },
+    // submitHandler() {
+    //   console.log(this.submitted);
+    //   this.submitted = true;
+    //   this.nameSubmitted = this.name;
+    //   setTimeout(
+    //     function() {
+    //       console.log('timeout')
+    //       return this.submitted = false
+    //     },
+    //     15000
+    //   )
+    // },
+  mounted() {
+    this.submitted = false;
+    window.addEventListener('scroll', this.scrollDownListener)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scrollDownListener)
+  },
+}
+
 </script>
