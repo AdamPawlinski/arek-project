@@ -16,13 +16,12 @@
         colored-border
         type="info"
         elevation="2"
-        value
         app
         transition="fade-transition"
       >
           Używamy cookies w celu świadczenia usług i statystyk. Brak zmiany
           ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
-          urządzeniu. <v-btn text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
+          urządzeniu. <v-spacer></v-spacer> <v-btn class="supra-alert-button d-inline-block" text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
       </v-alert> 
       <router-view 
         class="supra-content"
@@ -30,9 +29,9 @@
           <Main />
       </router-view>
       <Footer />      
-      <div v-show="visible">
+      <div >
         <v-btn
-          href="#app"
+          v-show="visible"
           class="supra-hero__arrow supra-hero__arrow--up py-6 white--text"
           color="#3bbb9a" 
           @click="$vuetify.goTo(target)"       
@@ -100,18 +99,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
-
-// #nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>

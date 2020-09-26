@@ -10,17 +10,17 @@
       >     
         <v-sheet 
           height="100%"
-          class="d-flex transparent align-center"      
+          class="d-flex transparent align-center justify-center justify-md-start"      
         >        
           <v-card    
-            class="transparent ml-sm-16"        
+            class="transparent ml-md-16"        
             max-height="30vh"
             max-width="100vw" 
             elevation="0"
             data-aos="flip-up"
             data-aos-delay="300"
             >
-            <v-card-text class="text-h2 align-self-start text-md-left justify-start font-weight-medium">
+            <v-card-text class="text-h4 text-sm-h2 text-left text-center text-md-left font-weight-medium">
             Porozmawiajmy <br>
             o <span style="color:#3bbb9a;">Twoich</span><br> potrzebach 
             finansowych

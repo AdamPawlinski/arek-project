@@ -38,9 +38,9 @@
           Chcesz wiedzieć więcej? <br>
           Potrzebujesz pomocy?
         </v-subheader>
-        <v-btn class="black--text text-h6 text-none rounded-0 pa-7" large elevation="0" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio <br> skontaktuję się z Tobą</v-btn>
+        <v-btn max-width="80%" height="auto" class="supra-main__call-to-action-button d-inline-block black--text text-h6 text-none rounded-0 py-7" elevation="0" to="kontakt"> Wypełnij formularz a bezpłatnie i bezpośrednio skontaktuję się z Tobą</v-btn>
       </v-container>
-      <v-container class="supra-main__text-content d-flex flex-column align-center my-10" >
+      <v-container class="supra-main__text-content d-flex flex-column align-center my-10">
         <v-row>
           <v-subheader class="text-h2 font-weight-medium my-10"> Oferta</v-subheader>
         </v-row>

@@ -6,7 +6,7 @@
       </v-row>
       <v-row class="d-flex flex-column align-center my-10">
         <v-col class="d-flex flex-column align-center" cols="12" md="8">
-          <v-subheader class="text-h2 font-weight-medium my-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
+          <v-subheader class="text-md-h2 text-h4 font-weight-medium my-10">Dowiedz się co mogę dla Ciebie zrobić</v-subheader> 
           <v-divider class="supra-main__divider my-10"></v-divider>  
           <v-card flat class="text-h5 mx-16 mx-lg-0 font-weight-regular my-5 text-left">
             Współpracuję z kilkunastoma bankami, towarzystwami ubezpieczeniowymi  i leasingowymi  w Polsce mających w swojej ofercie Kredyty obrotowe, ratalne, inwestycyjne, leasing samochodów, maszyn i urządzeń, faktoring, dla firm, a także kredyty hipoteczne, gotówkowe i konsolidacyjne dla klientów indywidualnych, ubezpieczenia na życie, majątkowe, zdrowotne czy firmowe. 

@@ -11,7 +11,7 @@
           Specjalizuję się w dostarczaniu <br>kompleksowych uslug finansowych <br>dla przedsiębiorstw <br>oraz klienta indywidualnego.
         </p>
       </v-col>
-      <v-divider color="#3bbb9a" inset class="d-flex d-lg-none"> </v-divider>
+      <v-divider color="#3bbb9a" class="supra-footer__divider d-lg-none"> </v-divider>
       <v-col cols="12" lg="3" class="d-flex justify-center justify-lg-start">
         <v-list color="transparent">
           <v-list-item 
@@ -30,7 +30,7 @@
           </v-list-item>
         </v-list>
       </v-col>
-      <v-divider color="#3bbb9a" inset class="d-flex d-lg-none"> </v-divider>
+      <v-divider color="#3bbb9a" height="1px" class="supra-footer__divider d-lg-none"> </v-divider>
       <v-col cols="12" lg="3" class="d-flex justify-center justify-lg-end">
         <div class="d-flex flex-column align-center align-lg-start">
           <v-btn
@@ -46,7 +46,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-divider color="#3bbb9a" inset class="d-flex d-lg-none"> </v-divider>
+    <v-divider color="#3bbb9a" class="supra-footer__divider d-lg-none"> </v-divider>
     <v-row>
       <v-col cols="12" lg="6" class="d-flex justify-center justify-lg-start">
         <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">Spotkajmy się</v-btn>
