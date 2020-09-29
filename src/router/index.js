@@ -1,54 +1,54 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import goTo from 'vuetify/es5/services/goto'
-import Main from '../components/Main'
-import Contact from '../components/Contact'
-import Offer from '../components/Offer'
-import AboutMe from '../components/AboutMe'
-import PrivacyPolicy from '../components/PrivacyPolicy'
-import Error from '../components/Error'
+// import Main from '../components/Main'
+// import Contact from '../components/Contact'
+// import Offer from '../components/Offer'
+// import AboutMe from '../components/AboutMe'
+// import PrivacyPolicy from '../components/PrivacyPolicy'
+// import Error from '../components/Error'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    component: Main,
+    component: () => import('../components/Main.vue'),
     meta: {
       breadCrumb: 'Strona główna'
     }
   },
   {
     path: '/kontakt',
-    component: Contact,
+    component: () => import('../components/Contact.vue'),
     meta: {
       breadCrumb: 'Kontakt'
     }
   },
   {
     path: '/oferta',
-    component: Offer,
+    component: () => import('../components/Offer1.vue'),
     meta: {
       breadCrumb: 'Oferta'
     }
   },
   {
     path: '/omnie',
-    component: AboutMe,
+    component: () => import('../components/AboutMe.vue'),
     meta: {
       breadCrumb: 'O mnie' 
     }
   },
   {
     path: '/polityka-prywatnosci',
-    component: PrivacyPolicy,
+    component: () => import('../components/PrivacyPolicy.vue'),
     meta: {
       breadCrumb: 'Polityka prywatności'
     }
   },
   {
     path: '*',
-    component: Error,
+    component: () => import('../components/Error.vue'),
     meta: {
       breadCrumb: '404 page'
     }

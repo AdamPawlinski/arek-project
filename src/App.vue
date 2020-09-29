@@ -10,7 +10,7 @@
           
       <Header />
       <v-alert
-        class="supra-alert rounded-0"
+        class="supra-alert rounded-0 mb-0"
         width="100%"
         dismissible
         colored-border
@@ -23,11 +23,13 @@
           ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
           urządzeniu. <v-spacer></v-spacer> <v-btn class="supra-alert-button d-inline-block" text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
       </v-alert> 
+      <v-content>
       <router-view 
         class="supra-content"
       >         
           <Main />
       </router-view>
+      </v-content>
       <Footer />      
       <div >
         <v-btn
