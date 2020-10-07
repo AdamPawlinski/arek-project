@@ -23,13 +23,13 @@
           ustawień przeglądarki oznacza, że będą one umieszczane na Twoim
           urządzeniu. <v-spacer></v-spacer> <v-btn class="supra-alert-button d-inline-block" text href="https://www.kokoma.pl/jak-zmienic-ustawienia-cookies"> Możesz zmienić te ustawienia.</v-btn>
       </v-alert> 
-      <v-content>
+      <v-main>
       <router-view 
-        class="supra-content"
+        class="supra-main"
       >         
           <Main />
       </router-view>
-      </v-content>
+      </v-main>
       <Footer />      
       <div >
         <v-btn

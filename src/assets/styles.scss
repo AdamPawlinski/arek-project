@@ -76,26 +76,12 @@
   }
   &__card {
     position: relative;
-    // &-button {
-    //   margin-bottom: .5rem;
-    // }
     &-title {
       word-break: break-word;
     }
     &-content {
       height: 100%;
     }
-    // @media screen and (min-width: 960px) {
-    //   min-height: 40vh !important;
-    //    &-button {
-    //     position: absolute;
-    //     margin-bottom: 0;
-    //     bottom: 1%;
-    //   }
-    // } 
-    // @media screen and (min-width: 1264px) {
-    //   min-height: 50vh !important;       
-    // }
   } 
 }
 a {

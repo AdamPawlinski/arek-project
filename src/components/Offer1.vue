@@ -9,7 +9,7 @@
           <v-card
             tile
             height="800"
-            width="1000"
+            width="1500"
           >
             <v-navigation-drawer 
               width="100%"
@@ -84,17 +84,30 @@
         </v-col>
       </v-row>        
     </v-container>
-    <v-container v-else>
+    <v-container v-else class="supra-offer d-flex flex-column align-center">
       <v-row>
-        <v-col>
+        <v-col cols="12">
+          <v-card
+            tile
+            height="100%"
+          >          
           <v-expansion-panels focusable>
             <v-expansion-panel
               v-for="item in cards"
-              :key="item"
-            >
+              :key="item.title"
+            >            
               <v-expansion-panel-header>{{item.title}}</v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-card class="ma-4 text-left">
+                  <v-img
+                    height="400"
+                    max-height="800"
+                    max-width="90vw"
+                    :src="item.img"
+                    :lazy-src="item.img"  
+                    cover            
+                  >
+                  </v-img>
                   <v-card-subtitle>
                     {{item.subtitle}}
                   </v-card-subtitle>
@@ -117,6 +130,7 @@
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
+          </v-card>
         </v-col>
       </v-row>    
     </v-container>
