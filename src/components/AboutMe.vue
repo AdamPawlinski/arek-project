@@ -13,7 +13,7 @@
               Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  
             </p>
           </v-card-text>
-          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets/arkadiusz_sztaba_2.png" alt="Arkadiusz"></v-img>        
+          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets//Arkadiusz_Sztaba_Supra_Finanse.png" alt="Arkadiusz"></v-img>        
         </v-card>
     </v-container>
     <!-- <v-container class="supra-contact__data d-flex flex-column align-center justify-center my-10">
@@ -57,21 +57,21 @@
 <script>
 export default {
   name: "AboutMe", 
-   data: () => ({
-      experience: [
-        {
-          year: 2017,
-          description: "Dyrektor Oddziału Nest Bank" 
-        },
-        {
-          year: 2015,
-          description: "Dyrektor Oddziału Raiffeisen Bank" 
-        },
-        {
-          year: 2012,
-          description: "Dyrektor Oddziału Polbank" 
-        }
-      ]
-    }),
+  //  data: () => ({
+  //     experience: [
+  //       {
+  //         year: 2017,
+  //         description: "Dyrektor Oddziału Nest Bank" 
+  //       },
+  //       {
+  //         year: 2015,
+  //         description: "Dyrektor Oddziału Raiffeisen Bank" 
+  //       },
+  //       {
+  //         year: 2012,
+  //         description: "Dyrektor Oddziału Polbank" 
+  //       }
+  //     ]
+  //   }),
   }
 </script>
