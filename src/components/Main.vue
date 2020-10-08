@@ -45,7 +45,7 @@
           <v-subheader class="text-h2 font-weight-medium my-10"> Oferta</v-subheader>
         </v-row>
         <v-row>
-          <v-col cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.title"
+          <v-col cols="12" md="6" lg="3" v-for="(card, i) in cards" :key="card.id"
             data-aos="fade-up"
             data-aos-offset="200"
             :data-aos-delay="i * 50"
@@ -61,7 +61,7 @@
                       </p>
                     </v-card-text> 
                     <v-card-actions class="supra-main__card-button">
-                      <v-btn text to="oferta" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
+                      <v-btn text :to="{path: `oferta/${card.id}`}" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
                     </v-card-actions> 
                   </div>              
               </v-card>
@@ -84,34 +84,42 @@ export default {
     return {
       cards: [
         {
+          id: 1,
           title: "Kredyt obrotowy",
           text: "na dowolny cel, to kredyt przeznaczony na finansowanie bieżącej działalności przedsiębiorstwa, umożliwiający zachowanie płynności finansowej Twojej firmy."
         },
         {
+          id: 2,
           title: "Kredyt inwestycyjny",
           text: "to kredyt przeznaczony na konkretne przedsięwzięcia inwestycyjne przedsiębiorstwa, między innymi na takie jak: zakup środków trwałych, samochodów, maszyn i urządzeń. "
         },
         {
+          id: 3,
           title: "Kredyt konsolidacyjny",
           text: "Kredyt konsolidacyjny to kredyt dzięki któremu łączysz kilka kredytów w jeden z niższą miesięczną ratą niż suma dotychczasowych rat."
         },
         {
+          id: 4,
           title: "Kredyt na spłatę ZUS i US.",
           text: "Pomagam uzyskać finansowanie na spłatę zaległości wobec Zakładu Ubezpieczeń Społecznych lub Urzędu Skarbowego  instytucji."
         },
         {
+          id: 5,
           title: "Kredyt hipoteczny",
           text: "Wybór kredytu hipotecznego to nie lada wyzwanie. Pomogę Ci przebrnąć przez gąszcz ofert bankowych i wybrać najkorzystniejszą dla Ciebie lub Twojej firmy."
         },
         {
+          id: 6,
           title: "Leasing",
           text: "to umowa, na mocy której leasingodawca oddaje do użytkowania daną rzecz leasingobiorcy, w zamian za ustaloną w umowie opłatą uiszczaną co miesiąc."
         },
         {
+          id: 7,
           title: "Ubezpieczenie",
           text: "w trosce o bezpieczeństwo Twoje, Twoich bliskich, Twojego majątku i Twojego biznesu współpracuję z topowymi Towarzystwami Ubezpieczeniowymi."
         },
         {
+          id: 8,
           title: "Faktoring",
           text: "czyli finansowanie faktur to wykup przez podmiot świadczący usługę faktoringu nieprzeterminowanych wierzytelności przedsiębiorstw."
         },

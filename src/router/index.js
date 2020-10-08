@@ -33,6 +33,14 @@ Vue.use(VueRouter)
     }
   },
   {
+    path: '/oferta/:opened',
+    component: () => import('../components/Offer1.vue'),
+    meta: {
+      breadCrumb: 'Oferta'
+    },
+    props: true
+  },
+  {
     path: '/omnie',
     component: () => import('../components/AboutMe.vue'),
     meta: {

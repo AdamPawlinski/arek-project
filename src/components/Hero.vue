@@ -38,7 +38,7 @@
   </v-container>
 </template>
 <script>
-import heroImage from '../assets/arek-hero.png'
+import heroImage from '../assets/arkadiusz_sztaba_3.png'
 export default {
   name: "Hero", 
   data () {
