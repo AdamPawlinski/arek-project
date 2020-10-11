@@ -1,31 +1,35 @@
 <template>
   <div>
-    <v-container v-if="$vuetify.breakpoint.mdAndUp" class="supra-offer d-flex flex-column align-center">
+    <v-container v-if="$vuetify.breakpoint.mdAndUp" class="supra-offer d-flex flex-column align-center" min-height="100vh">
       <v-row class="supra-offer__image">
-        <v-img src="../assets/offer_background_1.png" width="100vw" max-height="200px" ></v-img>
+        <v-img src="../assets/offer_background_1.png" class="d-flex align-center justify-center text-h4 font-weight-bold" width="100vw" max-height="200px"><div class="supra-offer__image-text">{{chosen.title}}</div></v-img>
       </v-row>
       <v-row>
         <v-col cols="12" md="4">
           <v-card
             tile
-            height="800"
             width="1500"
+            class="supra-offer__navigation-card d-flex justify-center py-10"
+            elevation="0"
+            color="#e6e6e6"
           >
             <v-navigation-drawer 
-              width="100%"
-              height="100%"
+              width="90%"
               permanent
+              floating
             >
               <v-list
-                nav                
+                nav
+                class="pa-0"              
               >
                 <v-list-item-group                  
-                  color="primary"
+                  
                 >
                   <v-list-item
                     v-for="item in cards"
                     :key="item.title"
-                    @click="picked = item"             
+                    @click="picked = item"
+                    class="pa-0"             
                   >
                     <!-- <v-list-item-icon>
                       <v-icon v-text="item.icon"></v-icon>
@@ -39,13 +43,27 @@
               </v-list>
             </v-navigation-drawer>
           </v-card>
+          <v-card
+            tile
+            width="1500"
+            class="supra-offer__contact-card my-10"
+            elevation="0"
+            color="#2e3047"
+          >
+            <v-card-title class="white--text">
+              Zapraszam do kontaktu
+            </v-card-title>
+            <v-card-text>
+              <v-btn width="100%" height="auto" color="#3bbb9a" class="supra-offer__contact-button d-inline-block white--text text-h6 text-left rounded-0 py-3" elevation="0" to="kontakt"><v-icon class="pr-15">mdi-email</v-icon>Kontakt</v-btn>
+            </v-card-text>
+          </v-card>
         </v-col>
         <v-col cols="12" md="8">
-          <v-card class="ma-4 text-left">
+          <v-card class="ma-4 text-left" elevation="0">
             <v-img
               height="400"
               max-height="800"
-              max-width="1500"
+              max-width="980"
               :src="chosen.img"
               :lazy-src="chosen.img"              
             >
@@ -65,7 +83,7 @@
             <v-card-subtitle>
               {{chosen.subtitle}}
             </v-card-subtitle>
-            <v-card-text class="text-h5">
+            <v-card-text class="text-h5 font-weight-bold">
               {{chosen.text}}                    
             </v-card-text>                  
             <v-list class="ml-4">
@@ -75,7 +93,10 @@
                 :key="advantages"
                 class="body-2 font-weight-light"
               >
-                <v-list-item-content>
+                <v-list-item-icon>
+                  <v-icon color="#3bbb9a">mdi-check-circle</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>                   
                   <v-list-item-title v-text="advantages"></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
@@ -84,7 +105,7 @@
         </v-col>
       </v-row>        
     </v-container>
-    <v-container v-else class="supra-offer d-flex flex-column align-center">
+    <v-container v-else class="supra-offer d-flex flex-column align-center mb-10">
       <v-row>
         <v-col cols="12">
           <v-card
@@ -95,8 +116,9 @@
             <v-expansion-panel
               v-for="item in cards"
               :key="item.title"
+              class="supra-offer__expansion-panel"
             >            
-              <v-expansion-panel-header>{{item.title}}</v-expansion-panel-header>
+              <v-expansion-panel-header class="text-h5">{{item.title}}</v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-card class="ma-4 text-left">
                   <v-img
@@ -111,7 +133,7 @@
                   <v-card-subtitle>
                     {{item.subtitle}}
                   </v-card-subtitle>
-                  <v-card-text>
+                  <v-card-text class="text-h5 font-weight-bold">
                     {{item.text}}                    
                   </v-card-text>                  
                   <v-list class="ml-4">
@@ -119,8 +141,12 @@
                     <v-list-item
                       v-for="advantages in item.list"
                       :key="advantages"
-                      class="body-1 font-weight-light"
+                      class="body-1 font-weight-light d-flex align-center"
+                      two-line
                     >
+                      <v-list-item-icon class="my-6">
+                        <v-icon color="#3bbb9a">mdi-check-circle</v-icon>
+                      </v-list-item-icon>
                       <v-list-item-content>
                         <v-list-item-title v-text="advantages"></v-list-item-title>
                       </v-list-item-content>
@@ -141,6 +167,7 @@ import insurance from "../assets/ubezpieczenie_1.jpeg"
 import investment from "../assets/kredyt_inwestycyjny_1.jpeg"
 import mortage from "../assets/kredyt_hipoteczny_1.jpeg"
 import leasing from "../assets/leasing_1.jpeg"
+import credit from "../assets/kredyt_obrotowy_1.jpeg"
 
 export default {
   name: "Offer1", 
@@ -158,7 +185,7 @@ export default {
           subtitle: "",
           text: "Kredyt obrotowy na dowolny cel, to kredyt przeznaczony na finansowanie bieżącej działalności przedsiębiorstwa, umożliwiający zachowanie płynności finansowej Twojej firmy.",
           list: ["szybka decyzja kredytowa", "zachowanie płynności finansowej", "niskie raty miesięczne i brak zabezpieczeń rzeczowych", "umożliwia pokrycie nagłych wydatków i bieżących potrzeb", "ciągłość prowadzonej działalności"],
-          img: investment
+          img: credit
         },
         {
           id: 2,

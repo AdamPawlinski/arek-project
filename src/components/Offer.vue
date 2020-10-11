@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="supra-offer d-flex flex-column align-center">
+    <v-container class="supra-offer d-flex flex-column align-center"">
       <v-row class="supra-offer__image">
         <v-img src="../assets/offer_background_1.png" width="100vw" max-height="200px" ></v-img>
       </v-row>

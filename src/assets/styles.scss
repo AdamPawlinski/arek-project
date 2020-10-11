@@ -178,6 +178,38 @@ a {
     }
   }
 }
+
+.supra-offer {
+  &__image-text {
+    color: #FFF;
+    
+  }
+  &__navigation-card.v-card {
+    .v-list-item {
+      &:hover {
+        background-color: #3bbb9a;
+        color: #FFF !important;
+        opacity: 0.5;
+      }
+      &--active{
+        background-color: #3bbb9a;
+        color: #FFF !important;
+      }
+    }
+  }
+  .v-list-item__title {
+    white-space: normal;
+  }
+  .v-expansion-panel-header {
+    &--active {
+      background-color: #3bbb9a;
+      color: #FFF !important;
+      .v-icon {
+        color: #FFF !important;
+      }
+    }
+  }
+}
 // .supra-content {
 //   margin-bottom: 1200px;
 //   @media screen and (min-width: 1264px) {
