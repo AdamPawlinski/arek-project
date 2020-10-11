@@ -59,7 +59,7 @@
           </v-card>
         </v-col>
         <v-col cols="12" md="8">
-          <v-card class="ma-4 text-left" elevation="0">
+          <v-card class="mx-4 mb-10 text-left" elevation="0">
             <v-img
               height="400"
               max-height="800"
@@ -118,7 +118,7 @@
               :key="item.title"
               class="supra-offer__expansion-panel"
             >            
-              <v-expansion-panel-header class="text-h5">{{item.title}}</v-expansion-panel-header>
+              <v-expansion-panel-header class="text-h5  pl-8">{{item.title}}</v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-card class="ma-4 text-left">
                   <v-img

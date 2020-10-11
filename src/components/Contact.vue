@@ -70,7 +70,7 @@
         </v-checkbox>
 
         <v-btn
-          class="mr-4"
+          class="mr-4 mb-4"
           color="blue darken-2"
           outlined
           type="submit"
@@ -80,7 +80,7 @@
         </v-btn>
 
         <v-btn          
-          class="mr-4"
+          class="mr-4 mb-4"
           color="error"
           outlined
           @click="reset"
@@ -101,8 +101,9 @@
       <v-card
         class="supra-contact__card d-flex flex-column justify-space-around align-center pa-3 pa-md-12"
         width="75vw"
+        elevation="0"
       >
-        <v-card-subtitle class="pb-4 subtitle-1">Supra Finanse</v-card-subtitle>
+        <v-card-subtitle class="pb-4 text-h5">Supra Finanse</v-card-subtitle>
 
         <v-card-text class="text--primary text-h5">
           <p>Arkadiusz Sztaba</p>
