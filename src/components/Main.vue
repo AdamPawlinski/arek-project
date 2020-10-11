@@ -61,7 +61,7 @@
                       </p>
                     </v-card-text> 
                     <v-card-actions class="supra-main__card-button">
-                      <v-btn text :to="{path: `oferta`}" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
+                      <v-btn text :to="{path: `oferta/${card.id}`}" :color="hover ? '#3bbb9a' : 'black--text'">Więcej</v-btn>
                     </v-card-actions> 
                   </div>              
               </v-card>

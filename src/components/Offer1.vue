@@ -87,11 +87,11 @@
               {{chosen.text}}                    
             </v-card-text>                  
             <v-list class="ml-4">
-              <h4> Korzyści:</h4>
+              <h4 class="text-h5 font-weight-bold text--secondary"> Korzyści:</h4>
               <v-list-item
                 v-for="advantages in chosen.list"
                 :key="advantages"
-                class="body-2 font-weight-light"
+                class="body-1 font-weight-regular text--secondary"
               >
                 <v-list-item-icon>
                   <v-icon color="#3bbb9a">mdi-check-circle</v-icon>
@@ -111,6 +111,7 @@
           <v-card
             tile
             height="100%"
+            elevation="0"
           >                   
           <v-expansion-panels focusable>
             <v-expansion-panel
@@ -120,7 +121,7 @@
             >            
               <v-expansion-panel-header class="text-h5  pl-8">{{item.title}}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                <v-card class="ma-4 text-left">
+                <v-card class="ma-4 text-left" elevation="0">
                   <v-img
                     height="400"
                     max-height="800"
@@ -137,7 +138,7 @@
                     {{item.text}}                    
                   </v-card-text>                  
                   <v-list class="ml-4">
-                    <h4> Korzyści:</h4>
+                    <h4 >Korzyści:</h4>
                     <v-list-item
                       v-for="advantages in item.list"
                       :key="advantages"
@@ -245,21 +246,13 @@ export default {
       if(this.picked) {
         console.log('b',this.picked)
         return this.picked
-      } else if(this.opened) { 
-        return this.cards.find( 
-          card => {
-            console.log(card.id === parseInt(this.opened))
-            card.id === parseInt(this.opened) 
-          }
-        )
+      } else if(this.opened) {         
+        return this.cards[this.opened - 1]
       } else {
         console.log('c',this.cards[0])
         return this.cards[0]
       }
     }
-  }, 
-  mounted() {
-    console.log(this.opened)
-  }
+  },
 }
 </script>
