@@ -1,18 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import goTo from 'vuetify/es5/services/goto'
-// import Main from '../components/Main'
-// import Contact from '../components/Contact'
-// import Offer from '../components/Offer'
-// import AboutMe from '../components/AboutMe'
-// import PrivacyPolicy from '../components/PrivacyPolicy'
-// import Error from '../components/Error'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
+    name: 'home',
     component: () => import('../components/Main.vue'),
     meta: {
       breadCrumb: 'Strona główna'
@@ -20,28 +15,23 @@ Vue.use(VueRouter)
   },
   {
     path: '/kontakt',
+    name: 'kontakt', 
     component: () => import('../components/Contact.vue'),
     meta: {
       breadCrumb: 'Kontakt'
     }
   },
   {
-    path: '/oferta',
-    component: () => import('../components/Offer1.vue'),
+    path: '/oferta/:opened',
+    name: 'oferta', 
+    component: () => import('../components/Offer1.vue'),             
     meta: {
       breadCrumb: 'Oferta'
     }
   },
   {
-    path: '/oferta/:opened',
-    component: () => import('../components/Offer1.vue'),
-    meta: {
-      breadCrumb: 'Oferta'
-    },
-    props: true
-  },
-  {
     path: '/omnie',
+    name: 'omnie',
     component: () => import('../components/AboutMe.vue'),
     meta: {
       breadCrumb: 'O mnie' 
@@ -49,6 +39,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/polityka-prywatnosci',
+    name: 'polityka-prywatnosci',
     component: () => import('../components/PrivacyPolicy.vue'),
     meta: {
       breadCrumb: 'Polityka prywatności'
@@ -56,19 +47,12 @@ Vue.use(VueRouter)
   },
   {
     path: '*',
+    name: 'error',
     component: () => import('../components/Error.vue'),
     meta: {
       breadCrumb: '404 page'
     }
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
 
 const router = new VueRouter({
@@ -84,6 +68,14 @@ const router = new VueRouter({
 
     return goTo(scrollTo)
   },
+  // beforeEach: ()=>(
+  //   (to, from, next) => {
+  //     console.log(to, from)
+  //     if (from.path === "oferta/*") 
+  //     to === {path: `/${to}`}
+  //     next() 
+  //   }
+  // ),
   routes
 })
 

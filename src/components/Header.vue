@@ -104,7 +104,7 @@
           },
           {
             title: "Oferta",
-            to: "oferta",
+            to: "oferta/kredyt-obrotowy",
           },
           {
             title: "Kontakt",

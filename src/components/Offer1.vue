@@ -2,7 +2,7 @@
   <div>
     <v-container v-if="$vuetify.breakpoint.mdAndUp" class="supra-offer d-flex flex-column align-center" min-height="100vh">
       <v-row class="supra-offer__image">
-        <v-img src="../assets/offer_background_1.png" class="d-flex align-center justify-center text-h4 font-weight-bold" width="100vw" max-height="200px"><div class="supra-offer__image-text">{{chosen.title}}</div></v-img>
+        <v-img src="../assets/offer_background_1.png" class="d-flex align-center justify-center text-h4 font-weight-bold" width="100vw" max-height="200px"><div class="supra-offer__image-text">{{opened.title}}</div></v-img>
       </v-row>
       <v-row>
         <v-col cols="12" md="4">
@@ -28,15 +28,11 @@
                   <v-list-item
                     v-for="item in cards"
                     :key="item.title"
-                    @click="picked = item"
+                    @click="clickHandler(item)"
                     class="pa-0"             
                   >
-                    <!-- <v-list-item-icon>
-                      <v-icon v-text="item.icon"></v-icon>
-                    </v-list-item-icon> -->
-
                     <v-list-item-content>
-                      <v-list-item-title class="supra-offer__item-title text-h5" v-text="item.title"></v-list-item-title>
+                      <v-list-item-title class="supra-offer__item-title text-h5 " v-text="item.title"></v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                 </v-list-item-group>
@@ -64,40 +60,27 @@
               height="400"
               max-height="800"
               max-width="980"
-              :src="chosen.img"
-              :lazy-src="chosen.img"              
+              :src="opened.img"
+              :lazy-src="opened.img"              
             >
-              <!-- <template v-slot:placeholder>
-                <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-                >
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template> -->
             </v-img>
             <v-card-subtitle>
-              {{chosen.subtitle}}
+              {{opened.subtitle}}
             </v-card-subtitle>
-            <v-card-text class="text-h5 font-weight-bold">
-              {{chosen.text}}                    
+            <v-card-text class="text-h5">
+              {{opened.text}}                    
             </v-card-text>                  
             <v-list class="ml-4">
-              <h4 class="text-h5 font-weight-bold text--secondary"> Korzyści:</h4>
+              <h4 class="text-h5 text--secondary"> Korzyści:</h4>
               <v-list-item
-                v-for="advantages in chosen.list"
-                :key="advantages"
-                class="body-1 font-weight-regular text--secondary"
+                v-for="advantages in opened.list"
+                :key="advantages"                
               >
                 <v-list-item-icon>
                   <v-icon color="#3bbb9a">mdi-check-circle</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>                   
-                  <v-list-item-title v-text="advantages"></v-list-item-title>
+                  <v-list-item-title v-text="advantages" class="subtitle-1 text--secondary"></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list>
@@ -134,15 +117,15 @@
                   <v-card-subtitle>
                     {{item.subtitle}}
                   </v-card-subtitle>
-                  <v-card-text class="text-h5 font-weight-bold">
+                  <v-card-text class="text-h5 text--secondary">
                     {{item.text}}                    
                   </v-card-text>                  
                   <v-list class="ml-4">
-                    <h4 >Korzyści:</h4>
+                    <h4 class="text-h5 text--secondary">Korzyści:</h4>
                     <v-list-item
                       v-for="advantages in item.list"
                       :key="advantages"
-                      class="body-1 font-weight-light d-flex align-center"
+                      class="subtitle-1 text--secondary font-weight-light d-flex align-center"
                       two-line
                     >
                       <v-list-item-icon class="my-6">
@@ -172,11 +155,6 @@ import credit from "../assets/kredyt_obrotowy_1.jpeg"
 
 export default {
   name: "Offer1", 
-  props: {
-    opened: {
-      default: ""
-    }
-  },
   data () {
     return {
       cards: [
@@ -238,21 +216,33 @@ export default {
           img: investment
         },
       ],
-      picked: 0        
+      opened: 0   
     }   
   }, 
-  computed: {
-    chosen() {
-      if(this.picked) {
-        console.log('b',this.picked)
-        return this.picked
-      } else if(this.opened) {         
-        return this.cards[this.opened - 1]
-      } else {
-        console.log('c',this.cards[0])
-        return this.cards[0]
-      }
+  watch: {
+    '$route.params.opened': {
+      handler: function(open) {      
+        this.readCategoryIdFromUrl(open);        
+      },
+      deep: true,
+      immediate: true
     }
   },
+  methods: {
+    clickHandler(item) {
+      this.$router.push({name: "oferta", params: {opened: item.title.toLowerCase().split(' ').join('-')}})
+    },
+    readCategoryIdFromUrl(open) {  
+          return this.opened = this.cards.find(
+            card => {
+              return card.title.toLowerCase().split(' ').join('-') === open.toLowerCase()
+            }
+          )
+        }
+  },
+  mounted() {
+    console.log(this.$route.params.opened )
+    if (this.$route.params.opened === undefined) this.$router.push({name: "oferta", params: {opened: "kredyt-obrotowy" }})
+  }
 }
 </script>

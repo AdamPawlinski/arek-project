@@ -84,35 +84,35 @@ export default {
     offers: [
         {
           title: "Kredyt obrotowy",
-          to: "oferta/1"
+          to: "oferta/kredyt-obrotowy"
         },
         {
           title: "Kredyt inwestycyjny",
-          to: "oferta/2"
+          to: "oferta/kredyt-inwestycyjny"
         },
         {
           title: "Kredyt konsolidacyjny",
-          to: "oferta/3"
+          to: "oferta/kredyt-konsolidacyjny"
         },
         {
           title: "Kredyt na spłatę ZUS i US",
-          to: "oferta/4"
+          to: "oferta/kredyt-na-spłatę-zus-i-us"
         },
         {
           title: "Kredyt hipoteczny",
-          to: "oferta/5"
+          to: "oferta/kredyt-hipoteczny"
         },
         {
           title: "Leasing",
-          to: "oferta/6"
+          to: "oferta/leasing"
         },
         {
           title: "Ubezpieczenie",
-          to: "oferta/7"
+          to: "oferta/ubezpieczenie"
         },
         {
           title: "Faktoring",
-          to: "oferta/8"
+          to: "oferta/faktoring"
         },
       ],
       links: [
@@ -126,7 +126,7 @@ export default {
         },
         {
           name: "Oferta",
-          to: "oferta"
+          to: "oferta/kredyt-obrotowy"
         },
         {
           name: "Kontakt",
