@@ -50,7 +50,7 @@
               Zapraszam do kontaktu
             </v-card-title>
             <v-card-text>
-              <v-btn width="100%" height="auto" color="#3bbb9a" class="supra-offer__contact-button d-inline-block white--text text-h6 text-left rounded-0 py-3" elevation="0" to="kontakt"><v-icon class="pr-15">mdi-email</v-icon>Kontakt</v-btn>
+              <v-btn width="100%" height="auto" color="#3bbb9a" class="supra-offer__contact-button d-inline-block white--text text-h6 text-left rounded-0 py-3" elevation="0" to="/kontakt"><v-icon class="pr-15">mdi-email</v-icon>Kontakt</v-btn>
             </v-card-text>
           </v-card>
         </v-col>

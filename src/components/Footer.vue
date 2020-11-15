@@ -49,7 +49,7 @@
     <v-divider color="#3bbb9a" class="supra-footer__divider d-lg-none"> </v-divider>
     <v-row>
       <v-col cols="12" lg="6" class="d-flex justify-center justify-lg-start">
-        <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">Spotkajmy się</v-btn>
+        <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="/kontakt">Spotkajmy się</v-btn>
       </v-col>
       <v-col cols="12" lg="6">
         <v-card-text class="d-flex justify-center justify-lg-end">
@@ -84,35 +84,35 @@ export default {
     offers: [
         {
           title: "Kredyt obrotowy",
-          to: "oferta/kredyt-obrotowy"
+          to: "/oferta/kredyt-obrotowy"
         },
         {
           title: "Kredyt inwestycyjny",
-          to: "oferta/kredyt-inwestycyjny"
+          to: "/oferta/kredyt-inwestycyjny"
         },
         {
           title: "Kredyt konsolidacyjny",
-          to: "oferta/kredyt-konsolidacyjny"
+          to: "/oferta/kredyt-konsolidacyjny"
         },
         {
           title: "Kredyt na spłatę ZUS i US",
-          to: "oferta/kredyt-na-spłatę-zus-i-us"
+          to: "/oferta/kredyt-na-spłatę-zus-i-us"
         },
         {
           title: "Kredyt hipoteczny",
-          to: "oferta/kredyt-hipoteczny"
+          to: "/oferta/kredyt-hipoteczny"
         },
         {
           title: "Leasing",
-          to: "oferta/leasing"
+          to: "/oferta/leasing"
         },
         {
           title: "Ubezpieczenie",
-          to: "oferta/ubezpieczenie"
+          to: "/oferta/ubezpieczenie"
         },
         {
           title: "Faktoring",
-          to: "oferta/faktoring"
+          to: "/oferta/faktoring"
         },
       ],
       links: [
@@ -122,19 +122,19 @@ export default {
         },
         {
           name: "O mnie",
-          to: "omnie"
+          to: "/omnie"
         },
         {
           name: "Oferta",
-          to: "oferta/kredyt-obrotowy"
+          to: "/oferta/kredyt-obrotowy"
         },
         {
           name: "Kontakt",
-          to: "kontakt"
+          to: "/kontakt"
         },
         {
           name: "Polityka Prywatności",
-          to: "polityka-prywatnosci"
+          to: "/polityka-prywatnosci"
         },
       ],
       icons: [

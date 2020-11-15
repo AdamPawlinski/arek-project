@@ -26,7 +26,7 @@
             finansowych
             </v-card-text>
             <v-card-actions class="justify-center justify-md-start">
-                <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="kontakt">{{item.button}}</v-btn>
+                <v-btn class="black--text text-h5 rounded-0 pa-5" outlined large color="white" to="/kontakt">{{item.button}}</v-btn>
             </v-card-actions>
           </v-card>            
         </v-sheet>

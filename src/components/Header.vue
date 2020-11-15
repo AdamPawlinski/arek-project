@@ -100,15 +100,15 @@
           },
           {
             title: "O mnie",
-            to: "omnie",
+            to: "/omnie",
           },
           {
             title: "Oferta",
-            to: "oferta/kredyt-obrotowy",
+            to: "/oferta/kredyt-obrotowy",
           },
           {
             title: "Kontakt",
-            to: "kontakt",
+            to: "/kontakt",
           }
         ]
 
