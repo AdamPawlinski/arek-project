@@ -3,18 +3,88 @@
     <v-container class="supra-about-me d-flex flex-column align-center justify-center mt-10">
       <div>
           <v-subheader class="text-h2 my-10">O mnie</v-subheader>
-        </div>
-        <v-card class="d-flex flex-column align-center pa-10" elevation="0">
-          <v-card-text class="text-left text-h5">
-            <p>
-              Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. Służę przy tym wiedzą zgromadzoną w trakcie ponad 16-letniej kariery w branży, którą realizowałem na stanowiskach kierowniczych w takich instytucjach jak Nest Bank, Plus Bank, Raiffeisen Bank czy Polbank. Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
-            </p>
-            <p>
-              Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  
-            </p>
-          </v-card-text>
-          <v-img  class="rounded-circle" width="200px" height="200px" src="../assets//Arkadiusz_Sztaba_Supra_Finanse.png" alt="Arkadiusz"></v-img>        
-        </v-card>
+      </div>
+      <v-card class="d-flex flex-column align-center pa-10" elevation="0">
+        <v-card-text class="text-left text-h5">
+          <p>
+            Specjalizuję się w dostarczaniu usług finansowych dla przedsiębiorstw oraz klientów indywidualnych. Moją misją jest dostarczanie właściwych usług klientom oraz wspieranie ich w często trudnych decyzjach dotyczących finansów firmy oraz budżetu domowego. Służę przy tym wiedzą zgromadzoną w trakcie prawie 20-letniej kariery. Znajomość funkcjonowania banków pomaga mi obecnie skuteczniej działać dla dobra moich klientów. 
+          </p>
+          <p>
+            Działając wiele lat w dziedzinie finansów, wiem jak ważne jest zaufanie oraz dobry kontakt współpracujących ze sobą stron. Dlatego staram się najpierw dobrze poznać potrzeby moich klientów i profesjonalnie doradzić odpowiednie rozwiązanie.  
+          </p>
+        </v-card-text>
+      </v-card>
+      <v-row>
+          <v-col cols="12" md="4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            :data-aos-delay="i * 50"
+          >
+             <v-hover v-slot:default="{ hover }">
+              <v-card height="100%" class="supra-main__card pa-5 mx-10 mx-md-0" hover :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+                <div class="supra-main__bullet mt-4"></div>
+                  <div class="supra-main__card-content d-flex flex-column justify-space-between ml-6 mt-n11">
+                    <v-card-title class="supra-main__card-title text-left">Kompleksowa obsługa</v-card-title>
+                    <v-card-text>
+                      <p class="text-left">
+                        Zapewniam pełną obsługę od ustalenia potrzeb, poprzez dobór właściwych produktów i wyjaśnienie zawiłości prawno-finansowych aż po podpisanie dokumentacji i wdrożenie produktu.
+                      </p>
+                    </v-card-text>
+                    <v-card-actions class="supra-main__card-button">
+                      <v-btn text to="/kontakt" :color="hover ? '#3bbb9a' : 'black--text'">Dowiedz się więcej</v-btn>
+                    </v-card-actions> 
+                  </div>              
+              </v-card>
+             </v-hover>
+          </v-col>
+          <v-col cols="12" md="4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            :data-aos-delay="i * 50"
+          >
+             <v-hover v-slot:default="{ hover }">
+              <v-card height="100%" class="supra-main__card pa-5 mx-10 mx-md-0" hover :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+                <div class="supra-main__bullet mt-4"></div>
+                  <div class="supra-main__card-content d-flex flex-column justify-space-between ml-6 mt-n11">
+                    <v-card-title class="supra-main__card-title text-left">Indywidualne podejście</v-card-title>
+                    <v-card-text>
+                      <p class="text-left">
+                        Do każdego klienta i jego potrzeb podchodzę indywidualnie i dobieram właściwe rozwiązania. Współpraca ze mną to gwarancja dobrego rozwiązania dla firm i klientów indywidualnych.
+                      </p>
+                    </v-card-text>
+                    <v-card-actions class="supra-main__card-button">
+                      <v-btn text to="/kontakt" :color="hover ? '#3bbb9a' : 'black--text'">Dowiedz się więcej</v-btn>
+                    </v-card-actions> 
+                  </div>              
+              </v-card>
+             </v-hover>
+          </v-col>
+          <v-col cols="12" md="4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            :data-aos-delay="i * 50"
+          >
+             <v-hover v-slot:default="{ hover }">
+              <v-card height="100%" class="supra-main__card pa-5 mx-10 mx-md-0" hover :color="hover ? 'rgba(46, 48, 71, 0.8)' : 'white'" :class="hover ? 'white--text' : 'black--text' ">
+                <div class="supra-main__bullet mt-4"></div>
+                  <div class="supra-main__card-content d-flex flex-column justify-space-between ml-6 mt-n11">
+                    <v-card-title class="supra-main__card-title text-left">Pełna wiarygodność</v-card-title>
+                    <v-card-text>
+                      <p class="text-left">
+                        Nawiązałem współpracę z wieloma instytucjami finansowymi, uzyskując pełną wiarygodność jako pośrednik finansowy. Na co dzień współpracuje z wieloma klientami w zakresie kredytów firmowych i konsumpcyjnych oraz ubezpieczeń i leasingów.                         
+                      </p>
+                    </v-card-text>
+                    <v-card-actions class="supra-main__card-button">
+                      <v-btn text to="/kontakt" :color="hover ? '#3bbb9a' : 'black--text'">Dowiedz się więcej</v-btn>
+                    </v-card-actions> 
+                  </div>              
+              </v-card>
+             </v-hover>
+          </v-col>
+        </v-row>
+        <v-row>
+           <v-img  class="rounded-circle ma-10" width="200px" height="200px" src="../assets//Arkadiusz_Sztaba_Supra_Finanse.png" alt="Arkadiusz"></v-img>
+        </v-row>
     </v-container>
     <!-- <v-container class="supra-contact__data d-flex flex-column align-center justify-center my-10">
       <div>

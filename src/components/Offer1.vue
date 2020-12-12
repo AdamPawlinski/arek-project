@@ -8,7 +8,7 @@
         <v-col cols="12" md="4">
           <v-card
             tile
-            width="1500"
+            width="100%"
             class="supra-offer__navigation-card d-flex justify-center py-10"
             elevation="0"
             color="#e6e6e6"
@@ -41,7 +41,7 @@
           </v-card>
           <v-card
             tile
-            width="1500"
+            width="100%"
             class="supra-offer__contact-card my-10"
             elevation="0"
             color="#2e3047"
